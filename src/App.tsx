@@ -5,6 +5,7 @@ import Header from './components/header/Header';
 import { ColorModeContext } from './components/darkMode/darkMode';
 import Contents from './components/contents/Contents';
 import Footer from './components/footer/Footer';
+import { CssBaseline } from '@mui/material';
 
 function App() {
 
@@ -30,9 +31,11 @@ function App() {
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
+        <CssBaseline>
         <Header />
         <Contents/>
         <Footer/>
+        </CssBaseline>
       </ThemeProvider>
     </ColorModeContext.Provider>
   )
