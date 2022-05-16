@@ -4,7 +4,7 @@ import { styled, Theme, useTheme } from '@mui/system';
 
 const Header = () => {
   
-  let theme: Theme = useTheme()
+  const theme: Theme = useTheme()
 
   const HeaderStyle = styled('div')({
     [theme.breakpoints.up('xl')]: {
@@ -29,13 +29,17 @@ const Header = () => {
     paddingLeft: '1rem'
   })
 
+  const handleHeaderClick = (e:any) => {
+    console.log(e.target.innerHTML)
+  }
+
   return (
     <HeaderStyle>
-      <ContentsParaStyle>Home</ContentsParaStyle>
-      <ContentsParaStyle>About</ContentsParaStyle>
-      <ContentsParaStyle>Skills</ContentsParaStyle>
-      <ContentsParaStyle>Project</ContentsParaStyle>
-      <ContentsParaStyle>Contact</ContentsParaStyle>
+      <ContentsParaStyle onClick={handleHeaderClick}>Home</ContentsParaStyle>
+      <ContentsParaStyle onClick={handleHeaderClick}>About</ContentsParaStyle>
+      <ContentsParaStyle onClick={handleHeaderClick}>Skills</ContentsParaStyle>
+      <ContentsParaStyle onClick={handleHeaderClick}>Project</ContentsParaStyle>
+      <ContentsParaStyle onClick={handleHeaderClick}>Contact</ContentsParaStyle>
       <ToggleButton/>
     </HeaderStyle>
   )

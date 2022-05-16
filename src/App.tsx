@@ -37,13 +37,15 @@ function App() {
       }),
     [mode],
   );
+
+  
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline>
-        <Header />
-        <Contents/>
-        <Footer/>
+          <Header />
+          <Contents/>
+          <Footer/>
         </CssBaseline>
       </ThemeProvider>
     </ColorModeContext.Provider>
