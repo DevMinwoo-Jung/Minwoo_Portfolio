@@ -2,8 +2,8 @@ import React from 'react'
 import { ToggleButton } from '../darkMode/darkMode'
 import { styled, Theme, useTheme } from '@mui/system';
 
-const Header = () => {
-  
+const Header = ({handleAccessDiv}: any) => {
+
   const theme: Theme = useTheme()
 
   const HeaderStyle = styled('div')({
@@ -29,17 +29,18 @@ const Header = () => {
     paddingLeft: '1rem'
   })
 
-  const handleHeaderClick = (e:any) => {
+  const onAccessDiv = (e:any) => {
     console.log(e.target.innerHTML)
+    handleAccessDiv(e)
   }
 
   return (
     <HeaderStyle>
-      <ContentsParaStyle onClick={handleHeaderClick}>Home</ContentsParaStyle>
-      <ContentsParaStyle onClick={handleHeaderClick}>About</ContentsParaStyle>
-      <ContentsParaStyle onClick={handleHeaderClick}>Skills</ContentsParaStyle>
-      <ContentsParaStyle onClick={handleHeaderClick}>Project</ContentsParaStyle>
-      <ContentsParaStyle onClick={handleHeaderClick}>Contact</ContentsParaStyle>
+      <ContentsParaStyle onClick={onAccessDiv}>Home</ContentsParaStyle>
+      <ContentsParaStyle onClick={onAccessDiv}>About</ContentsParaStyle>
+      <ContentsParaStyle onClick={onAccessDiv}>Skills</ContentsParaStyle>
+      <ContentsParaStyle onClick={onAccessDiv}>Project</ContentsParaStyle>
+      <ContentsParaStyle onClick={onAccessDiv}>Contact</ContentsParaStyle>
       <ToggleButton/>
     </HeaderStyle>
   )

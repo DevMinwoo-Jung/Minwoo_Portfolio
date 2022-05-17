@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { styled } from '@mui/system'
 
 const Contact = () => {
@@ -7,8 +7,10 @@ const Contact = () => {
     height: '500px',
     border: 'red 10px solid'
 })
+
+const contactOffsetTop = useRef(null)
   return (
-    <ContactStyle>contact</ContactStyle>
+    <ContactStyle ref={contactOffsetTop}>contact</ContactStyle>
   )
 }
 

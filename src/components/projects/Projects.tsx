@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { styled } from '@mui/system'
 
 const Projects = () => {
@@ -8,8 +8,10 @@ const Projects = () => {
     border: 'black 10px solid'
 })
 
+const projectOffsetTop = useRef(null)
+
   return (
-    <ProjectStyle>Projects</ProjectStyle>
+    <ProjectStyle ref={projectOffsetTop}>Projects</ProjectStyle>
   )
 }
 

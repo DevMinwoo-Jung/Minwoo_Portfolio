@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { styled } from '@mui/system'
 
 const Skills = () => {
@@ -7,8 +7,9 @@ const Skills = () => {
         height: '500px',
         border: 'purple 10px solid'
     })
+    const skillsOffsetTop = useRef(null)
   return (
-    <SkillsStyle>Skills</SkillsStyle>
+    <SkillsStyle  ref={skillsOffsetTop}>Skills</SkillsStyle>
   )
 }
 
