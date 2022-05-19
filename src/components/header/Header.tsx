@@ -22,7 +22,7 @@ const Header = ({handleAccessDiv}: any) => {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'end',
-
+    cursor: 'pointer'
   })
 
   const ContentsParaStyle = styled('p')({
@@ -36,7 +36,6 @@ const Header = ({handleAccessDiv}: any) => {
 
   return (
     <HeaderStyle>
-      <ContentsParaStyle onClick={onAccessDiv}>Home</ContentsParaStyle>
       <ContentsParaStyle onClick={onAccessDiv}>About</ContentsParaStyle>
       <ContentsParaStyle onClick={onAccessDiv}>Skills</ContentsParaStyle>
       <ContentsParaStyle onClick={onAccessDiv}>Project</ContentsParaStyle>

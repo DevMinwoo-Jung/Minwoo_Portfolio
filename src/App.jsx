@@ -9,6 +9,7 @@ import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import Projects from './components/projects/Projects';
 import Skills from './components/skills/Skills';
+import { RefType } from './utils/type';
 
 function App() {
 
@@ -76,11 +77,11 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline>
           <Header handleAccessDiv={handleAccessDiv}/>
-            <div ref={aboutOffsetTop} onClick={handleAccessDiv}>
+            <div ref={aboutOffsetTop}>
               <About/>
             </div>
             <div ref={skillsOffsetTop}>
-              <Skills/>
+              <Skills skillsOffsetTop={skillsOffsetTop}/>
             </div>
             <div  ref={projectOffsetTop}>
               <Projects/>
