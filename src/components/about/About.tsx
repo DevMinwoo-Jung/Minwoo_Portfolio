@@ -6,6 +6,7 @@ const About = () => {
       width: '100%',
       height: '700px',
       border: 'pink 10px solid',
+      marginTop: '46px'
   })
 
   return (

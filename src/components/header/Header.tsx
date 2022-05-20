@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { ToggleButton } from '../darkMode/darkMode'
 import { styled, Theme, useTheme } from '@mui/system';
 
-const Header = ({handleAccessDiv}: any) => {
+const Header = ({handleAccessDiv}: any ) => {
 
   const theme: Theme = useTheme()
 
@@ -18,16 +18,46 @@ const Header = ({handleAccessDiv}: any) => {
       justifyContent: 'center',
     },
     width: '100%',
-    border: '1px solid black',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'end',
-    cursor: 'pointer'
+    position: 'fixed',
+    zIndex: 10,
+    background: 'white',
+    opacity: '1',
+    top:0
   })
 
   const ContentsParaStyle = styled('p')({
-    paddingLeft: '1rem'
+    paddingLeft: '1rem',
+    cursor: 'pointer',
   })
+
+  const scrollRef: any = useRef()
+  const headerRef: any = useRef()
+
+  const yScrollEvent = () => {
+    const scroll = scrollRef.current.getBoundingClientRect()
+    console.log(scroll.top)
+    if(scroll.top < -150) {
+      headerRef.current.style.opacity = '0.3'
+      headerRef.current.style.transition = '1s'
+      headerRef.current.style.border = 'none'
+    }
+    if(scroll.top > -150) {
+      headerRef.current.style.opacity = '1'
+      headerRef.current.style.transition = '1s'
+      headerRef.current.style.border = '1px solid black'
+    }
+  }
+
+  useEffect(() => {
+    if (!scrollRef.current) return;
+    window.addEventListener("scroll", yScrollEvent)
+    return () => {
+      window.removeEventListener("scroll", yScrollEvent)
+    };
+  });
 
   const onAccessDiv = (e:any) => {
     console.log(e.target.innerHTML)
@@ -35,13 +65,15 @@ const Header = ({handleAccessDiv}: any) => {
   }
 
   return (
-    <HeaderStyle>
-      <ContentsParaStyle onClick={onAccessDiv}>About</ContentsParaStyle>
-      <ContentsParaStyle onClick={onAccessDiv}>Skills</ContentsParaStyle>
-      <ContentsParaStyle onClick={onAccessDiv}>Project</ContentsParaStyle>
-      <ContentsParaStyle onClick={onAccessDiv}>Contact</ContentsParaStyle>
-      <ToggleButton/>
-    </HeaderStyle>
+      <div ref={scrollRef}>
+        <HeaderStyle ref={headerRef}>
+          <ContentsParaStyle onClick={onAccessDiv}>About</ContentsParaStyle>
+          <ContentsParaStyle onClick={onAccessDiv}>Skills</ContentsParaStyle>
+          <ContentsParaStyle onClick={onAccessDiv}>Project</ContentsParaStyle>
+          <ContentsParaStyle onClick={onAccessDiv}>Contact</ContentsParaStyle>
+          <ToggleButton/>
+        </HeaderStyle>
+      </div>
   )
 }
 

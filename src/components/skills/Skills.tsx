@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { styled } from '@mui/system'
 import { RefType } from '../../utils/type'
-import Fade from '@mui/material/Fade';
 import { Slide } from '@mui/material';
 
 const Skills = ({ skillsOffsetTop }: RefType) => {
@@ -11,11 +10,6 @@ const Skills = ({ skillsOffsetTop }: RefType) => {
         height: '500px',
         border: 'purple 10px solid',
     })
-  const SkillSetStyle = styled('div')({
-      animation: 'fadein 3s',
-      
-  })
-
   const [hideSkills, setHideSkills] = useState(true);
   const scrollRef: any = useRef()
 

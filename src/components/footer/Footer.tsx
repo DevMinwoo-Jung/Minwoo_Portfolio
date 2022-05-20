@@ -1,8 +1,32 @@
 import React from 'react'
+import {styled, Theme, useTheme} from "@mui/system";
+import {Typography} from "@mui/material";
 
 const Footer = () => {
+  const theme: Theme = useTheme()
+  const FooterStyle = styled('div')({
+    width: '100%',
+    border: '1px solid black',
+    height: '50px',
+    display: 'flex',
+    alignItems: 'center'
+  })
+  const ParaStyle = styled(Typography)({
+    width: '100%',
+    textAlign: 'center',
+    [theme.breakpoints.up('xl')]: {
+      fontSize: '16px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '14px',
+    },
+  })
   return (
-    <div>Footer</div>
+    <FooterStyle>
+      <ParaStyle>
+        ©2022. 정민우 ALL RIGHTS RESERVED.
+      </ParaStyle>
+    </FooterStyle>
   )
 }
 
