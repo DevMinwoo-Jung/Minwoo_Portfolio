@@ -42,12 +42,10 @@ const Header = ({handleAccessDiv}: any ) => {
     if(scroll.top < -150) {
       headerRef.current.style.opacity = '0.3'
       headerRef.current.style.transition = '1s'
-      headerRef.current.style.border = 'none'
     }
     if(scroll.top > -150) {
       headerRef.current.style.opacity = '1'
       headerRef.current.style.transition = '1s'
-      headerRef.current.style.border = '1px solid black'
     }
   }
 
