@@ -1,38 +1,33 @@
 import React from 'react'
 import { styled } from '@mui/system'
 import { Typography } from '@mui/material'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid'
+import Github from '../lottie/Github'
+import Email from '../lottie/Email'
+import Call from '../lottie/Call'
 
 const Contact = () => {
   const ContactDiv = styled('div')({
     width: '100%',
-
-    textAlign: 'center',
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     color: 'white',
-    fontSize: '2rem'
-  })
-  
-  const TypographyDiv = styled('div')({
-    padding: '2rem'
-  })
-
-  const TypographyStyle = styled(Typography)({
-    fontSize: '3rem',
-    marginBottom: '2rem'
+    display: 'flex',
+    justifyContent: 'center'
   })
   
   const IconsDiv = styled('div')({
     fontSize: '2.5rem',
-    gap: '1rem'
+    gap: '1rem',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   })
 
   return (
     <ContactDiv>
         <IconsDiv>
-          <GitHubIcon/>
-          <PhoneAndroidIcon/>
+          <Github/>
+          <Email/>
+          <Call/>
         </IconsDiv>
     </ContactDiv>
   )
