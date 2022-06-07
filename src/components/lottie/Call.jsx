@@ -1,14 +1,14 @@
 import { useLottie } from 'lottie-react'
-import React, { useRef, memo } from 'react'
+import React, { useRef, useEffect, memo } from 'react'
 import incomingCall from '../../lottieJSON/incomingCall.json'
 import Lottie from 'lottie-web'
 
-const Call = () => {
+const _Call = () => {
     const lottie = useRef()
     const options = {
         animationData: incomingCall,
         loop: true,
-        autoplay: true,
+        autoplay: false,
         name: 'call',
         container: lottie.current
       };
@@ -17,8 +17,12 @@ const Call = () => {
         height: '60px',
         color: 'black'
     }
-      const { View } = useLottie(options, style);
-    
+    const { View } = useLottie(options, style);
+
+    useEffect(() => {
+        Lottie.stop('call')
+    }, [])
+
       return (
         <div ref={lottie}
           onMouseEnter={() => Lottie.play('call')}
@@ -28,5 +32,7 @@ const Call = () => {
         </div>  
       )
 }
+
+const Call = memo(_Call)
 
 export default Call

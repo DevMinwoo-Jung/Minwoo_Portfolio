@@ -1,14 +1,14 @@
 import { useLottie } from 'lottie-react'
-import React, { useRef, memo } from 'react'
+import React, { useRef, useEffect, memo } from 'react'
 import Lottie from 'lottie-web'
 import email from '../../lottieJSON/email.json'
 
-const Email = () => {
-  const lottie = useRef()
+const _Email = () => {
+    const lottie = useRef()
     const options = {
         animationData: email,
         loop: true,
-        autoplay: true,
+        autoplay: false,
         name: 'email',
         container: lottie.current
       };
@@ -16,7 +16,11 @@ const Email = () => {
         width: '60px',
         height: '60px'
     }
-      const { View } = useLottie(options, style);
+    const { View } = useLottie(options, style);
+
+    useEffect(() => {
+        Lottie.stop('email')
+    }, [])
     
       return (
         <div ref={lottie}
@@ -27,5 +31,7 @@ const Email = () => {
         </div>  
       )
 }
+
+const Email = memo(_Email)
 
 export default Email

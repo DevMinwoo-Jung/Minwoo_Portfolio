@@ -1,5 +1,5 @@
 import { useLottie } from 'lottie-react'
-import React, { useRef, memo } from 'react'
+import React, {useRef, useEffect, memo } from 'react'
 import Lottie from 'lottie-web'
 import github from '../../lottieJSON/github.json'
 
@@ -15,11 +15,15 @@ const _Github = () => {
       };
     const style = {
         width: '60px',
-        height: '60px'
+        height: '60px',
+        pointer: 'cursor'
     }
+    const { View } = useLottie(options, style);
 
-      const { View } = useLottie(options, style);
-    
+    useEffect(() => {
+        Lottie.stop('github')
+    }, [])
+
       return (
         <div ref={lottie}
           onMouseEnter={() => Lottie.play('github')}

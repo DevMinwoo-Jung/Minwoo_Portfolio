@@ -1,6 +1,5 @@
 import React from 'react'
 import { styled } from '@mui/system'
-import { Typography } from '@mui/material'
 import Github from '../lottie/Github'
 import Email from '../lottie/Email'
 import Call from '../lottie/Call'
