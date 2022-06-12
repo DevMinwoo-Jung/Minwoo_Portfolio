@@ -1,40 +1,64 @@
 import React, { VFC } from 'react'
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
-import IconButton from '@mui/material/IconButton';
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import SkipNextIcon from '@mui/icons-material/SkipNext';
-import { styled } from "@mui/system";
+import { useTheme } from '@mui/material/styles'
+import Box from '@mui/material/Box'
+import Card from '@mui/material/Card'
+import CardMedia from '@mui/material/CardMedia'
+import { styled } from "@mui/system"
+import { GoMarkGithub } from "react-icons/go"
+import { BiSlideshow } from "react-icons/bi"
+
 
 export type ProjectProps =  {
     project: any
 }
 
-const Project:VFC<ProjectProps> = () => {
+const Project:VFC<ProjectProps> = (props) => {
     const theme = useTheme();
+    const { project } = props
 
     const CardStyle = styled(Card)({
         width: '1000px',
-        height: '250px',
+        height: '300px',
         display: 'flex',
+        margin: 'auto'
     })
 
     const CardMediaStyle = styled(CardMedia)({
-        width: '250px'
+        width: '300px'
     })
 
     const CardContentStyle = styled('div')({
-        margin: '2rem',
+        margin: '0 2rem',
         textAlign: 'left',
-        maxWidth: '650px'
+        maxWidth: '650px',
+        height: '100%'
     })
 
     const CardDiv = styled('div')({
         width: '100%',
         margin: 'auto'
+    })
+
+    const IconsDiv = styled('div')({
+        display: 'flex',
+        fontSize: '2rem',
+        margin: '0 2rem',
+        alignItems: 'stretch',
+        cursor: 'pointer'
+    })
+
+    const AtagStyle = styled('a')({
+        ":-webkit-any-link": {
+            color: 'black'
+        }
+    })
+
+    const BoxStyle = styled(Box)({
+        display: 'flex',
+        alignItems: 'center',
+        padding: '8px 0 0 8px',
+        bottom: '0',
+        position: 'absolute'
     })
 
     return (
@@ -43,26 +67,27 @@ const Project:VFC<ProjectProps> = () => {
                 <CardMediaStyle
                     image='imgs/icon/javascript.png'
                 />
-                <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                <Box sx={{ position: 'relative', display: 'flex', flexDirection: 'column' }}>
                     <CardContentStyle>
-                        <p>
-                            Live From Space            Live From Space           Live From Space           Live From Space           Live From Space           Live From Space           Live From Space
-                        </p>
-                        <p>
-                            Mac Miller
-                        </p>
+                        <h2>{project.project__title}</h2>
+                        <span>
+                            {project.project__para}
+                            기여도: {project.project__contribution}
+                            기간: {project.project__making__duration}
+                            설명: {project.project__detail}
+                            기술 스택: {project.project__stack}
+                        </span>
                     </CardContentStyle>
-                    <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-                        <IconButton aria-label="previous">
-                            {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
-                        </IconButton>
-                        <IconButton aria-label="play/pause">
-                            <PlayArrowIcon sx={{ height: 38, width: 38 }} />
-                        </IconButton>
-                        <IconButton aria-label="next">
-                            {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
-                        </IconButton>
-                    </Box>
+                    <BoxStyle>
+                        <IconsDiv>
+                            <AtagStyle target='_blank' href={project.project__src}>
+                                <GoMarkGithub/>
+                            </AtagStyle>
+                            <AtagStyle target='_blank' href={project.project__live}>
+                                <BiSlideshow />
+                            </AtagStyle>
+                        </IconsDiv>
+                    </BoxStyle>
                 </Box>
             </CardStyle>
         </CardDiv>
