@@ -1666,6 +1666,11 @@
   "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.5.tgz"
   "version" "2.11.5"
 
+"@ramonak/react-progress-bar@^5.0.0":
+  "integrity" "sha512-5jvpTEymdgDVPFz60Zg2qC4TZdxneimJ8xwcd6ljIlKlPg8n4RMzProlRpcfV3y0Is3a6Of70KLNoW+SBFh9mA=="
+  "resolved" "https://registry.npmjs.org/@ramonak/react-progress-bar/-/react-progress-bar-5.0.0.tgz"
+  "version" "5.0.0"
+
 "@reduxjs/toolkit@^1.8.1":
   "integrity" "sha512-Q6mzbTpO9nOYRnkwpDlFOAbQnd3g7zj7CtHAZWz5SzE5lcV97Tf8f3SzOO8BoPOMYBFgfZaqTUZqgGu+a0+Fng=="
   "resolved" "https://registry.npmjs.org/@reduxjs/toolkit/-/toolkit-1.8.1.tgz"
@@ -6127,14 +6132,14 @@
   dependencies:
     "js-tokens" "^3.0.0 || ^4.0.0"
 
-"lottie-react@^2.2.1":
-  "integrity" "sha512-lAdIUw+zeHLX3gtyLkisa4QM9NkTUUeZTsEL53laBEsjIH4JibgwkioZuza8CtwZ7/cpPZRbCRXWKfiuaDZWww=="
-  "resolved" "https://registry.npmjs.org/lottie-react/-/lottie-react-2.2.1.tgz"
-  "version" "2.2.1"
+"lottie-react@1.2.2":
+  "integrity" "sha512-C/b4ScAb7CjgMpp9r8aheFdZcCpceBMgisMQqFUEkEtcolPYttK6CkkC9z59IWJD43V7CR8J1fF8+kWU2jZsmQ=="
+  "resolved" "https://registry.npmjs.org/lottie-react/-/lottie-react-1.2.2.tgz"
+  "version" "1.2.2"
   dependencies:
-    "lottie-web" "^5.8.1"
+    "lottie-web" "^5.6.10"
 
-"lottie-web@^5.8.1", "lottie-web@^5.9.4":
+"lottie-web@^5.6.10":
   "integrity" "sha512-bSs1ZTPifnBVejO1MnQHdfrKfcn02YTCmgOh2wcAEICqRA0V7GzDh8FnwXY6+EzT+i8XOunaIloo/5xC5YNbsA=="
   "resolved" "https://registry.npmjs.org/lottie-web/-/lottie-web-5.9.4.tgz"
   "version" "5.9.4"
@@ -7457,6 +7462,11 @@
   "integrity" "sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg=="
   "resolved" "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.11.tgz"
   "version" "6.0.11"
+
+"react-icons@^4.4.0":
+  "integrity" "sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg=="
+  "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.4.0.tgz"
+  "version" "4.4.0"
 
 "react-is@^16.13.1":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="

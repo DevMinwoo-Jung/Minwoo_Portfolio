@@ -4,8 +4,9 @@ import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
 import { styled } from "@mui/system"
-import { GoMarkGithub } from "react-icons/go"
-import { BiSlideshow } from "react-icons/bi"
+import { GoMarkGithub } from 'react-icons/go'
+import { BiSlideshow } from 'react-icons/bi'
+import Tooltip from '@mui/material/Tooltip'
 
 
 export type ProjectProps =  {
@@ -53,10 +54,14 @@ const Project:VFC<ProjectProps> = (props) => {
         }
     })
 
+    const CardParaStyle = styled('span')({
+        fontSize: '16px'
+    })
+
     const BoxStyle = styled(Box)({
         display: 'flex',
         alignItems: 'center',
-        padding: '8px 0 0 8px',
+        padding: '8px',
         bottom: '0',
         position: 'absolute'
     })
@@ -70,22 +75,27 @@ const Project:VFC<ProjectProps> = (props) => {
                 <Box sx={{ position: 'relative', display: 'flex', flexDirection: 'column' }}>
                     <CardContentStyle>
                         <h2>{project.project__title}</h2>
-                        <span>
-                            {project.project__para}
-                            기여도: {project.project__contribution}
-                            기간: {project.project__making__duration}
-                            설명: {project.project__detail}
+                        <CardParaStyle>
+                            {project.project__para}<br/>
+                            기여도: {project.project__contribution}<br/>
+                            기간: {project.project__making__duration}<br/>
+                            설명: {project.project__detail}<br/>
                             기술 스택: {project.project__stack}
-                        </span>
+                        </CardParaStyle>
                     </CardContentStyle>
                     <BoxStyle>
                         <IconsDiv>
-                            <AtagStyle target='_blank' href={project.project__src}>
-                                <GoMarkGithub/>
-                            </AtagStyle>
+                            <Tooltip title='Go to Github' placement="top">
+                                <AtagStyle target='_blank' href={project.project__src}>
+                                    <GoMarkGithub/>
+                                </AtagStyle>
+                            </Tooltip>
+                            &nbsp;&nbsp;
+                            <Tooltip title='Show Live' placement="top">
                             <AtagStyle target='_blank' href={project.project__live}>
                                 <BiSlideshow />
                             </AtagStyle>
+                            </Tooltip>
                         </IconsDiv>
                     </BoxStyle>
                 </Box>

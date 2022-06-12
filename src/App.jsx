@@ -77,7 +77,7 @@ function App() {
             <ThemeProvider theme={theme}>
                 <CssBaseline>
                     <div ref={headerOffsetTop}>
-                        <Header headerOffsetTop={headerOffsetTop} handleAccessDiv={handleAccessDiv}/>
+                        <Header handleAccessDiv={handleAccessDiv}/>
                     </div>
                     <div ref={aboutOffsetTop}>
                         <About/>

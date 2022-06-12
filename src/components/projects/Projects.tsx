@@ -10,7 +10,6 @@ const Projects = () => {
 
   const ProjectStyle = styled('div')({
     width: '100%',
-    border: 'black 10px solid'
   })
 
   const ProjectsDivStyle = styled('div')({

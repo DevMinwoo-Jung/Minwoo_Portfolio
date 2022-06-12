@@ -9,7 +9,6 @@ const Skills = ({ skillsOffsetTop }: RefType) => {
 
     const SkillsStyle = styled('div')({
         width: '100%',
-        border: 'purple 10px solid',
     })
     const [hideSkills, setHideSkills] = useState(true);
     const scrollRef: any = useRef()

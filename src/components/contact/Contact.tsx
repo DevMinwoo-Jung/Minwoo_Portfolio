@@ -10,7 +10,8 @@ const Contact = () => {
     backgroundColor: 'white',
     color: 'white',
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginTop: '2rem'
   })
   
   const IconsDiv = styled('div')({
