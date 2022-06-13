@@ -4,7 +4,6 @@ import React from 'react'
 const About = () => {
   const AboutStyle = styled('div')({
       width: '100%',
-      height: '700px',
       marginTop: '70px'
   })
 

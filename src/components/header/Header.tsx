@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react'
+import { memo, useEffect, useRef } from 'react'
 import { ToggleButton } from '../darkMode/darkMode'
 import { styled, Theme, useTheme } from '@mui/system';
 
-const Header = ({handleAccessDiv}: any ) => {
+const _Header = ({handleAccessDiv}: any ) => {
 
   const theme: Theme = useTheme()
 
@@ -39,11 +39,11 @@ const Header = ({handleAccessDiv}: any ) => {
   const yScrollEvent = () => {
     const scroll = scrollRef.current.getBoundingClientRect()
     console.log(scroll.top)
-    if(scroll.top < -150) {
+    if(scroll.top <= -250) {
       headerRef.current.style.opacity = '0.3'
       headerRef.current.style.transition = '1s'
     }
-    if(scroll.top > -150) {
+    if(scroll.top > -250) {
       headerRef.current.style.opacity = '1'
       headerRef.current.style.transition = '1s'
     }
@@ -55,7 +55,7 @@ const Header = ({handleAccessDiv}: any ) => {
     return () => {
       window.removeEventListener("scroll", yScrollEvent)
     };
-  });
+  }, [scrollRef]);
 
   const onAccessDiv = (e:any) => {
     console.log(e.target.innerHTML)
@@ -65,6 +65,7 @@ const Header = ({handleAccessDiv}: any ) => {
   return (
       <div ref={scrollRef}>
         <HeaderStyle ref={headerRef}>
+          <ContentsParaStyle onClick={onAccessDiv}>Home</ContentsParaStyle>
           <ContentsParaStyle onClick={onAccessDiv}>About</ContentsParaStyle>
           <ContentsParaStyle onClick={onAccessDiv}>Skills</ContentsParaStyle>
           <ContentsParaStyle onClick={onAccessDiv}>Project</ContentsParaStyle>
@@ -74,5 +75,7 @@ const Header = ({handleAccessDiv}: any ) => {
       </div>
   )
 }
+
+const Header = memo(_Header)
 
 export default Header

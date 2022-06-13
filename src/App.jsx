@@ -9,6 +9,7 @@ import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import Projects from './components/projects/Projects';
 import Skills from './components/skills/Skills';
+import Home from './components/Home/Home';
 
 function App() {
 
@@ -42,13 +43,19 @@ function App() {
     );
 
     const headerOffsetTop = useRef()
+    const homeOffsetTop = useRef()
     const aboutOffsetTop = useRef()
     const skillsOffsetTop = useRef()
     const projectOffsetTop = useRef()
     const contactOffsetTop = useRef()
 
     const handleAccessDiv = (e) => {
-        if (e.target.innerHTML === 'About') {
+        if (e.target.innerHTML === 'Home') {
+            homeOffsetTop.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            })
+        } else if (e.target.innerHTML === 'About') {
             aboutOffsetTop.current.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start',
@@ -78,6 +85,9 @@ function App() {
                 <CssBaseline>
                     <div ref={headerOffsetTop}>
                         <Header handleAccessDiv={handleAccessDiv}/>
+                    </div>
+                    <div ref={homeOffsetTop}>
+                        <Home/>
                     </div>
                     <div ref={aboutOffsetTop}>
                         <About/>
