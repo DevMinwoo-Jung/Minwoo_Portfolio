@@ -16,13 +16,13 @@ const Skill:VFC<skillProps> = (props) => {
     })
     const ImgStyle = styled('img')({
         [theme.breakpoints.up('xl')]: {
-            width: '120px',
-            height: '120px',
+            width: '8rem',
+            height: '8rem',
             margin: '2rem',
         },
         [theme.breakpoints.down('sm')]: {
-            width: '80px',
-            height: '80px',
+            width: '6rem',
+            height: '6rem',
             margin: 'auto 1rem',
         },
     })

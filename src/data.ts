@@ -52,4 +52,16 @@ export const projectsInfo: any = {
         project__src: 'https://github.com/DevMinwoo-Jung/Portfolio_for_Job',
         project__live: 'https://devminwoo-jung.github.io/Portfolio_for_Job/'
       },
+    project_four:
+        {
+            project__img: `imgs/rsz_homepage.png`,
+            project__title: 'Portfolio',
+            project__para: '지금 보고 계시는 포트폴리오를 제작하였습니다.',
+            project__contribution: '100%',
+            project__making__duration: '5일',
+            project__detail: 'React, React-router 사용하였고 Sass, tailwindcss를 적용해 보았습니다.',
+            project__stack: 'React, Javascript,  React-router, Sass, tailwindcss',
+            project__src: 'https://github.com/DevMinwoo-Jung/Portfolio_for_Job',
+            project__live: 'https://devminwoo-jung.github.io/Portfolio_for_Job/'
+        },
 }

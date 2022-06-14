@@ -16,8 +16,7 @@ const Project:VFC<ProjectProps> = (props) => {
     const { project } = props
 
     const CardStyle = styled(Card)(({ theme }) => ({
-        width: '60rem',
-        height: '25rem',
+        width: '50rem',
         display: 'flex',
         margin: 'auto',
         [theme.breakpoints.between('xl', 'md')]: {
@@ -25,7 +24,6 @@ const Project:VFC<ProjectProps> = (props) => {
         },
         [theme.breakpoints.down('sm')]: {
             width: '25rem',
-            height: '40rem',
             display: 'block'
         },
     }));
@@ -37,16 +35,28 @@ const Project:VFC<ProjectProps> = (props) => {
         },
         [theme.breakpoints.down('sm')]: {
             height: '20rem',
+            width: '100%',
+        },
+    }));
+
+    const DescBox = styled(Box)(({ theme }) => ({
+        width: '30rem',
+        height: '20rem',
+        position: 'relative',
+        [theme.breakpoints.between('xl', 'md')]: {
+            width: theme.breakpoints.values.xl
+        },
+        [theme.breakpoints.down('sm')]: {
+            height: '25rem',
             width: '25rem',
         },
     }));
 
     const CardContentStyle = styled('div')({
-        margin: '0 2rem',
+        margin: '1rem',
         textAlign: 'left',
         maxWidth: '650px',
-        height: '100%',
-        width: '90%'
+        width: '95%'
     })
 
     const CardDiv = styled('div')({
@@ -77,8 +87,9 @@ const Project:VFC<ProjectProps> = (props) => {
         alignItems: 'center',
         padding: '8px',
         bottom: '0',
-        position: 'absolute'
+
     })
+
 
     return (
         <CardDiv>
@@ -86,7 +97,7 @@ const Project:VFC<ProjectProps> = (props) => {
                 <CardMediaStyle
                     image='imgs/icon/javascript.png'
                 />
-                <Box sx={{ position: 'relative', display: 'flex', flexDirection: 'column' }}>
+                <DescBox>
                     <CardContentStyle>
                         <h2>{project.project__title}</h2>
                         <CardParaStyle>
@@ -112,7 +123,7 @@ const Project:VFC<ProjectProps> = (props) => {
                             </Tooltip>
                         </IconsDiv>
                     </BoxStyle>
-                </Box>
+                </DescBox>
             </CardStyle>
         </CardDiv>
     )

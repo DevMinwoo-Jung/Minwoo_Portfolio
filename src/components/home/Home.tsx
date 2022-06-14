@@ -26,19 +26,17 @@ const Main = () => {
     const NamePara = styled('h1')(({ theme }) => ({
         fontSize: '8rem',
         lineHeight: '8rem',
+        marginRight: '1.5rem',
         [theme.breakpoints.down('sm')]: {
             fontSize: '3rem',
-            margin: '1rem 0 0 1rem',
+            marginRight: '1.5rem',
             lineHeight: '4rem',
         },
     }));
 
     const Name = styled('div')(({ theme }) => ({
-        position: 'absolute',
-        bottom: '4rem',
         right: '4rem',
         [theme.breakpoints.down('sm')]: {
-            bottom: '6.5rem',
             right: '1rem',
         },
     }));
@@ -49,9 +47,11 @@ const Main = () => {
             <MainIntro>FRONTEND <br/>DEVELOPER</MainIntro>
             <ImageAndPara>
                 <MainImage/>
+                <Name>
                     <NamePara>
                         MINWOO <br/>JUNG
                     </NamePara>
+                </Name>
             </ImageAndPara>
         </MainStyle>
     )

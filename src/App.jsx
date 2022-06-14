@@ -9,7 +9,7 @@ import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import Projects from './components/projects/Projects';
 import Skills from './components/skills/Skills';
-import Home from './components/Home/Home';
+import Home from './components/home/Home';
 import styled from "@emotion/styled";
 
 function App() {
