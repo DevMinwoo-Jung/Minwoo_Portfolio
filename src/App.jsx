@@ -10,6 +10,7 @@ import Contact from './components/contact/Contact';
 import Projects from './components/projects/Projects';
 import Skills from './components/skills/Skills';
 import Home from './components/Home/Home';
+import styled from "@emotion/styled";
 
 function App() {
 
@@ -41,6 +42,19 @@ function App() {
             }),
         [mode],
     );
+
+    const Root = styled('div')(({ theme }) => ({
+        margin: 'auto',
+        [theme.breakpoints.up('xl')]: {
+            width: '1800px'
+        },
+        [theme.breakpoints.between('xl', 'md')]: {
+            width: theme.breakpoints.values.xl
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: theme.breakpoints.values.sm
+        },
+    }));
 
     const headerOffsetTop = useRef()
     const homeOffsetTop = useRef()
@@ -83,25 +97,27 @@ function App() {
         <ColorModeContext.Provider value={colorMode}>
             <ThemeProvider theme={theme}>
                 <CssBaseline>
-                    <div ref={headerOffsetTop}>
-                        <Header handleAccessDiv={handleAccessDiv}/>
-                    </div>
-                    <div ref={homeOffsetTop}>
-                        <Home/>
-                    </div>
-                    <div ref={aboutOffsetTop}>
-                        <About/>
-                    </div>
-                    <div ref={skillsOffsetTop}>
-                        <Skills skillsOffsetTop={skillsOffsetTop}/>
-                    </div>
-                    <div ref={projectOffsetTop}>
-                        <Projects/>
-                    </div>
-                    <div ref={contactOffsetTop}>
-                        <Contact/>
-                    </div>
-                    <Footer/>
+                    <Root>
+                        <div ref={headerOffsetTop}>
+                            <Header handleAccessDiv={handleAccessDiv}/>
+                        </div>
+                        <div ref={homeOffsetTop}>
+                            <Home/>
+                        </div>
+                        <div ref={aboutOffsetTop}>
+                            <About/>
+                        </div>
+                        <div ref={skillsOffsetTop}>
+                            <Skills skillsOffsetTop={skillsOffsetTop}/>
+                        </div>
+                        <div ref={projectOffsetTop}>
+                            <Projects/>
+                        </div>
+                        <div ref={contactOffsetTop}>
+                            <Contact/>
+                        </div>
+                        <Footer/>
+                    </Root>
                 </CssBaseline>
             </ThemeProvider>
         </ColorModeContext.Provider>

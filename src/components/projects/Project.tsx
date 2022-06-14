@@ -18,6 +18,7 @@ const Project:VFC<ProjectProps> = (props) => {
     const { project } = props
 
     const CardStyle = styled(Card)({
+
         width: '1000px',
         height: '300px',
         display: 'flex',
