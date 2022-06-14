@@ -1,4 +1,4 @@
-import { styled } from '@mui/system';
+import {styled} from '@mui/system';
 import React from 'react'
 import MainImage from '../lottie/MainImage'
 
@@ -8,7 +8,7 @@ const Main = () => {
         marginTop: '70px'
     })
 
-    const MainIntro = styled('h1')(({ theme }) => ({
+    const MainIntro = styled('h1')(({theme}) => ({
         fontSize: '8rem',
         margin: '1rem 0 0 5rem',
         [theme.breakpoints.down('sm')]: {
@@ -23,7 +23,7 @@ const Main = () => {
         justifyContent: 'space-between'
     })
 
-    const NamePara = styled('h1')(({ theme }) => ({
+    const NamePara = styled('h1')(({theme}) => ({
         fontSize: '8rem',
         lineHeight: '8rem',
         marginRight: '1.5rem',
@@ -34,7 +34,7 @@ const Main = () => {
         },
     }));
 
-    const Name = styled('div')(({ theme }) => ({
+    const Name = styled('div')(({theme}) => ({
         right: '4rem',
         [theme.breakpoints.down('sm')]: {
             right: '1rem',

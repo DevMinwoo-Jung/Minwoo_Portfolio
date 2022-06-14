@@ -53,7 +53,7 @@ const Project:VFC<ProjectProps> = (props) => {
     }));
 
     const CardContentStyle = styled('div')({
-        margin: '1rem',
+        margin: '1rem 1rem 0 1rem',
         textAlign: 'left',
         maxWidth: '650px',
         width: '95%'

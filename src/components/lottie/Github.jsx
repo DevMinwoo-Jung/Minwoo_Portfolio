@@ -14,8 +14,8 @@ const _Github = () => {
         container: lottie.current
       };
     const style = {
-        width: '60px',
-        height: '60px',
+        width: '8rem',
+        height: '8rem',
         pointer: 'cursor'
     }
     const { View } = useLottie(options, style);

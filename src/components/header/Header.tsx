@@ -8,19 +8,20 @@ const _Header = ({handleAccessDiv}: any ) => {
 
   const HeaderStyle = styled('div')({
     [theme.breakpoints.up('xl')]: {
+      width: '1800px',
       fontSize: '1.2rem',
     },
     [theme.breakpoints.between('lg', 'md')]: {
+      width: theme.breakpoints.values.xl,
       fontSize: '1rem'
     },
     [theme.breakpoints.down('sm')]: {
+      width: theme.breakpoints.values.sm,
       fontSize: '0.8rem',
       justifyContent: 'center',
     },
-    width: '100%',
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'end',
+    justifyContent: 'space-evenly',
     position: 'fixed',
     zIndex: 10,
     background: 'white',
