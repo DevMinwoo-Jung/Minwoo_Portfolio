@@ -1,5 +1,4 @@
 import React, { VFC } from 'react'
-import { useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
@@ -14,26 +13,40 @@ export type ProjectProps =  {
 }
 
 const Project:VFC<ProjectProps> = (props) => {
-    const theme = useTheme();
     const { project } = props
 
-    const CardStyle = styled(Card)({
-
-        width: '1000px',
-        height: '300px',
+    const CardStyle = styled(Card)(({ theme }) => ({
+        width: '60rem',
+        height: '25rem',
         display: 'flex',
-        margin: 'auto'
-    })
+        margin: 'auto',
+        [theme.breakpoints.between('xl', 'md')]: {
+            width: theme.breakpoints.values.xl
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: '25rem',
+            height: '40rem',
+            display: 'block'
+        },
+    }));
 
-    const CardMediaStyle = styled(CardMedia)({
-        width: '300px'
-    })
+    const CardMediaStyle = styled(CardMedia)(({ theme }) => ({
+        width: '20rem',
+        [theme.breakpoints.between('xl', 'md')]: {
+            width: theme.breakpoints.values.xl
+        },
+        [theme.breakpoints.down('sm')]: {
+            height: '20rem',
+            width: '25rem',
+        },
+    }));
 
     const CardContentStyle = styled('div')({
         margin: '0 2rem',
         textAlign: 'left',
         maxWidth: '650px',
-        height: '100%'
+        height: '100%',
+        width: '90%'
     })
 
     const CardDiv = styled('div')({

@@ -1,6 +1,7 @@
 import { useLottie } from 'lottie-react'
 import React, {useRef, memo } from 'react'
 import mainImage from '../../lottieJSON/main.json'
+import {styled} from "@mui/system";
 
 const _MainImage = () => {
     const lottie = useRef()
@@ -12,17 +13,25 @@ const _MainImage = () => {
         name: 'mainImage',
         container: lottie.current
       };
-    const style = {
+
+    const Style = styled('div')(({ theme }) => ({
         width: '35rem',
         height: '35rem',
         marginLeft: '10rem',
-    }
-    const { View } = useLottie(options, style);
+        [theme.breakpoints.down('sm')]: {
+            width: '15rem',
+            height: '15rem',
+            marginLeft: '2rem',
+        },
+    }));
+
+
+    const { View } = useLottie(options);
 
       return (
-        <div ref={lottie}>
+        <Style ref={lottie}>
             {View}
-        </div>  
+        </Style>
       )
 }
 

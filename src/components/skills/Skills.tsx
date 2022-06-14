@@ -4,6 +4,7 @@ import { RefType } from '../../utils/type'
 import { Slide } from '@mui/material'
 import Skill from './Skill'
 import { skills } from '../../data'
+import Grid from '@mui/material/Grid'
 
 const Skills = ({ skillsOffsetTop }: RefType) => {
 
@@ -29,15 +30,17 @@ const Skills = ({ skillsOffsetTop }: RefType) => {
     return (
         <SkillsStyle ref={scrollRef}>
             <Slide direction="up" in={!hideSkills}>
-                <div>
+                <Grid container>
                     {
                         Object.keys(skills)
                             .map((key) => skills[key])
                             .map((data) => (
-                                <Skill data={data} key={Math.random()} />
+                                <Grid item sm={12} md={6} xl={6}>
+                                    <Skill data={data} key={data.skillName} />
+                                </Grid>
                             ))
                     }
-                </div>
+                </Grid>
             </Slide>
         </SkillsStyle>
     )

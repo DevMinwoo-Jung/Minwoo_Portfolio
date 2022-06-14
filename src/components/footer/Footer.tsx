@@ -6,7 +6,7 @@ const Footer = () => {
   const theme: Theme = useTheme()
   const FooterStyle = styled('div')({
     width: '100%',
-    border: '1px solid black',
+
     height: '50px',
     display: 'flex',
     alignItems: 'center'

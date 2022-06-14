@@ -18,7 +18,7 @@ const Skill:VFC<skillProps> = (props) => {
         [theme.breakpoints.up('xl')]: {
             width: '120px',
             height: '120px',
-            margin: '2rem 10rem 2rem 10rem',
+            margin: '2rem',
         },
         [theme.breakpoints.down('sm')]: {
             width: '80px',
