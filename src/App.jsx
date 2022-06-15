@@ -49,7 +49,7 @@ function App() {
             width: '1800px'
         },
         [theme.breakpoints.between('xl', 'md')]: {
-            width: theme.breakpoints.values.xl
+            width: theme.breakpoints.values.lg
         },
         [theme.breakpoints.down('sm')]: {
             width: theme.breakpoints.values.sm
