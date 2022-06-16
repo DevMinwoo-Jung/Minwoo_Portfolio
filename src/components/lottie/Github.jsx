@@ -16,7 +16,11 @@ const _Github = () => {
     const style = {
         width: '8rem',
         height: '8rem',
-        pointer: 'cursor'
+        pointer: 'cursor',
+
+        'path:nth-child(*)':{
+          fill: 'white' /* shadowDOM style does NOT style global DOM */
+        }
     }
     const { View } = useLottie(options, style);
 

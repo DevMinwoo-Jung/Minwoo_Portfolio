@@ -7,7 +7,6 @@ export type skillProps = {
 
 const Skill:VFC<skillProps> = (props) => {
     const { data } = props
-    console.log(data)
     const theme: Theme = useTheme()
     const SkillsDiv = styled('div')({
         position: 'relative',
@@ -20,9 +19,14 @@ const Skill:VFC<skillProps> = (props) => {
             height: '8rem',
             margin: '2rem',
         },
+        [theme.breakpoints.down('xl')]: {
+            width: '5em',
+            height: '5rem',
+            margin: '2rem',
+        },
         [theme.breakpoints.down('sm')]: {
-            width: '6rem',
-            height: '6rem',
+            width: '5rem',
+            height: '5rem',
             margin: 'auto 1rem',
         },
     })
@@ -44,7 +48,7 @@ const Skill:VFC<skillProps> = (props) => {
     return (
         <>
             <SkillsDiv key={Math.random()}>
-                <ImgStyle src={data.imgSrc} alt="" />
+                <ImgStyle src={data.imgSrc} alt='' />
                 <SkillDescDiv>
                     <SkillHeader>{data.skillName}</SkillHeader>
                     {

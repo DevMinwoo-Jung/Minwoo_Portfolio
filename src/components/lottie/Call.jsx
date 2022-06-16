@@ -15,7 +15,6 @@ const _Call = () => {
     const style = {
         width: '8rem',
         height: '8rem',
-        color: 'black'
     }
     const { View } = useLottie(options, style);
 

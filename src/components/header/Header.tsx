@@ -6,9 +6,10 @@ const _Header = ({handleAccessDiv}: any ) => {
 
   const theme: Theme = useTheme()
 
-  const HeaderStyle = styled('div')({
+  const HeaderStyle = styled('div')(({theme}) => ({
+    width: '100%',
     [theme.breakpoints.up('xl')]: {
-      width: '1800px',
+      width: theme.breakpoints.values.xl,
       fontSize: '1.2rem',
     },
     [theme.breakpoints.between('lg', 'md')]: {
@@ -24,10 +25,9 @@ const _Header = ({handleAccessDiv}: any ) => {
     justifyContent: 'space-evenly',
     position: 'fixed',
     zIndex: 10,
-    background: 'white',
     opacity: '1',
     top:0
-  })
+  }))
 
   const ContentsParaStyle = styled('p')({
     paddingLeft: '1rem',

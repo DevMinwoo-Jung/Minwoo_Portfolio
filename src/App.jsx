@@ -46,10 +46,10 @@ function App() {
     const Root = styled('div')(({ theme }) => ({
         margin: 'auto',
         [theme.breakpoints.up('xl')]: {
-            width: '1800px'
+            width: theme.breakpoints.values.xl
         },
         [theme.breakpoints.between('xl', 'md')]: {
-            width: theme.breakpoints.values.lg
+            width: theme.breakpoints.values.xl
         },
         [theme.breakpoints.down('sm')]: {
             width: theme.breakpoints.values.sm

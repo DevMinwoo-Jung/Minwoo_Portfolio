@@ -16,7 +16,7 @@ const Project:VFC<ProjectProps> = (props) => {
     const { project } = props
 
     const CardStyle = styled(Card)(({ theme }) => ({
-        width: '50rem',
+        width: '45rem',
         display: 'flex',
         margin: 'auto',
         [theme.breakpoints.between('xl', 'md')]: {
@@ -35,7 +35,8 @@ const Project:VFC<ProjectProps> = (props) => {
         },
         [theme.breakpoints.down('sm')]: {
             height: '20rem',
-            width: '100%',
+            width: '90%',
+            margin: 'auto'
         },
     }));
 
@@ -43,12 +44,14 @@ const Project:VFC<ProjectProps> = (props) => {
         width: '30rem',
         height: '20rem',
         position: 'relative',
+        fontSize: '16px',
         [theme.breakpoints.between('xl', 'md')]: {
             width: theme.breakpoints.values.xl
         },
         [theme.breakpoints.down('sm')]: {
-            height: '25rem',
+            height: '23rem',
             width: '25rem',
+            fontSize: '14px'
         },
     }));
 
@@ -102,7 +105,7 @@ const Project:VFC<ProjectProps> = (props) => {
                         <h2>{project.project__title}</h2>
                         <CardParaStyle>
                             {project.project__para}<br/>
-                            기여도: {project.project__contribution}<br/>
+                            기여도: {project.project__contribution}
                             기간: {project.project__making__duration}<br/>
                             설명: {project.project__detail}<br/>
                             기술 스택: {project.project__stack}

@@ -15,13 +15,20 @@ const _MainImage = () => {
       };
 
     const Style = styled('div')(({ theme }) => ({
-        minWidth: '35rem',
-        minHeight: '35rem',
-        marginLeft: '10rem',
+        [theme.breakpoints.up('xl')]: {
+          minWidth: '35rem',
+          minHeight: '35rem',
+          marginLeft: '10rem',
+        },
+        [theme.breakpoints.down('xl')]: {
+          minWidth: '20rem',
+          minHeight: '20rem',
+          marginLeft: '2rem',
+        },
         [theme.breakpoints.down('sm')]: {
-            minWidth: '15rem',
-            minHeight: '15rem',
-            marginLeft: '1rem',
+          maxWidth: '10rem',
+          maxHeight: '10rem',
+          marginLeft: '1rem',
         },
     }));
 

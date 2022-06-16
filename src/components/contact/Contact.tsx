@@ -7,16 +7,10 @@ import Call from '../lottie/Call'
 const Contact = () => {
     const ContactDiv = styled('div')({
         width: '100%',
-        backgroundColor: 'white',
         display: 'block',
         margin: '2rem',
     })
-
-    const copyText = (event: any) => {
-        const target: string = String(event.target.parentElement.innerText)
-        navigator.clipboard.writeText(target.substring(target.match(":")!.index! + 1, target.match(" ")!.index! - 4));
-    }
-
+    
     const IconsDiv = styled('div')({
         fontSize: '2.5rem',
         gap: '1rem',
@@ -26,35 +20,56 @@ const Contact = () => {
     })
 
     const IconPara = styled('h1')(({theme}) => ({
-        fontSize: '4rem',
-        lineHeight: '4rem',
+        fontSize: '3rem',
+        lineHeight: '3rem',
         [theme.breakpoints.down('sm')]: {
-            fontSize: '3rem',
-            marginRight: '1.5rem',
+            fontSize: '2rem',
+            marginRight: '1rem',
         },
     }));
 
+    const SectionHeader = styled('h1')(({theme}) => ({
+        textAlign: 'center',
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '7rem',
+          },
+          [theme.breakpoints.down('xl')]: {
+            fontSize: '5rem'
+          },
+          [theme.breakpoints.down('sm')]: {
+            fontSize: '2rem',
+          },
+    }))
+
+    const CallStyle = styled(Call)({
+        color: 'white',
+        fill: 'none'
+    })
+
+    const CallStyle2 = styled(Github)({
+        fill: 'white',
+    })
+
     return (
         <ContactDiv>
+            <SectionHeader>Contact</SectionHeader>
             <IconsDiv>
-                <Github/>
+                <CallStyle2/>
                 <IconPara>
-                    Github: <a href="https://github.com/DevMinwoo-Jung">Go to Github</a>
+                    Github: https://github.com/DevMinwoo-Jung   
                 </IconPara>
             </IconsDiv>
             <IconsDiv>
                 <Email/>
                 <IconPara >
-                    Email:applejung312@gmail.com
+                    Email: applejung312@gmail.com
                 </IconPara>
-                <button onClick={copyText}>asd</button>
             </IconsDiv>
             <IconsDiv>
-                <Call/>
-                <IconPara onClick={copyText}>
-                    Phone:{`(82)010-8599-3012 `}
+                <CallStyle/>
+                <IconPara>
+                    Phone: {`(82)010-8599-3012 `}
                 </IconPara>
-                <button onClick={copyText}>dddd</button>
             </IconsDiv>
         </ContactDiv>
     )

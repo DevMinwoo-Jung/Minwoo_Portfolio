@@ -14,7 +14,7 @@ const _Email = () => {
       };
     const style = {
         width: '8rem',
-        height: '8rem'
+        height: '8rem',
     }
     const { View } = useLottie(options, style);
 
