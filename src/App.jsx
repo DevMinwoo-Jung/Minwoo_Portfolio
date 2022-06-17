@@ -111,7 +111,7 @@ function App() {
                             <Skills skillsOffsetTop={skillsOffsetTop}/>
                         </div>
                         <div ref={projectOffsetTop}>
-                            <Projects/>
+                            <Projects mode={mode}/>
                         </div>
                         <div ref={contactOffsetTop}>
                             <Contact/>

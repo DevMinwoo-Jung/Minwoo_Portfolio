@@ -11,16 +11,13 @@ const _Github = () => {
         loop: true,
         autoplay: false,
         name: 'github',
-        container: lottie.current
+        container: lottie.current,
       };
     const style = {
         width: '8rem',
         height: '8rem',
         pointer: 'cursor',
-
-        'path:nth-child(*)':{
-          fill: 'white' /* shadowDOM style does NOT style global DOM */
-        }
+        fill: 'white'
     }
     const { View } = useLottie(options, style);
 

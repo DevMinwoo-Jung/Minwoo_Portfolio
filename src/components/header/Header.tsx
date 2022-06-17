@@ -1,10 +1,8 @@
 import { memo, useEffect, useRef } from 'react'
 import { ToggleButton } from '../darkMode/darkMode'
-import { styled, Theme, useTheme } from '@mui/system';
+import { styled } from '@mui/system';
 
 const _Header = ({handleAccessDiv}: any ) => {
-
-  const theme: Theme = useTheme()
 
   const HeaderStyle = styled('div')(({theme}) => ({
     width: '100%',

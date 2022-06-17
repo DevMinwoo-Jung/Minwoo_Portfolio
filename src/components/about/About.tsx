@@ -9,12 +9,22 @@ const About = () => {
       textAlign: 'center'
   })
 
-  const AvartarStyle = styled(Avatar)({
+  const AvartarStyle = styled(Avatar)(({ theme }) => ({
     margin: 'auto',
     alignItems: 'center',
-    width: '25rem',
-    height: '25rem'
-  })
+    [theme.breakpoints.up('xl')]: {
+      width: '25rem',
+      height: '25rem',
+    },
+    [theme.breakpoints.down('xl')]: {
+      width: '20rem',
+      height: '20rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '15rem',
+      height: '15rem',
+    },
+  }))
 
   const Introduce = styled('div')({
     textAlign: 'center',

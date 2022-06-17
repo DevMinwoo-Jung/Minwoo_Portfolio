@@ -23,7 +23,7 @@ const Contact = () => {
         fontSize: '3rem',
         lineHeight: '3rem',
         [theme.breakpoints.down('sm')]: {
-            fontSize: '2rem',
+            fontSize: '1rem',
             marginRight: '1rem',
         },
     }));
@@ -32,29 +32,20 @@ const Contact = () => {
         textAlign: 'center',
         [theme.breakpoints.up('xl')]: {
             fontSize: '7rem',
-          },
-          [theme.breakpoints.down('xl')]: {
+        },
+        [theme.breakpoints.down('xl')]: {
             fontSize: '5rem'
-          },
-          [theme.breakpoints.down('sm')]: {
+        },
+        [theme.breakpoints.down('sm')]: {
             fontSize: '2rem',
-          },
+        },
     }))
-
-    const CallStyle = styled(Call)({
-        color: 'white',
-        fill: 'none'
-    })
-
-    const CallStyle2 = styled(Github)({
-        fill: 'white',
-    })
 
     return (
         <ContactDiv>
             <SectionHeader>Contact</SectionHeader>
             <IconsDiv>
-                <CallStyle2/>
+                <Github/>
                 <IconPara>
                     Github: https://github.com/DevMinwoo-Jung   
                 </IconPara>
@@ -66,7 +57,7 @@ const Contact = () => {
                 </IconPara>
             </IconsDiv>
             <IconsDiv>
-                <CallStyle/>
+                <Call/>
                 <IconPara>
                     Phone: {`(82)010-8599-3012 `}
                 </IconPara>

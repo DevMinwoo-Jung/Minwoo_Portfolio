@@ -17,7 +17,7 @@ const Skill:VFC<skillProps> = (props) => {
         [theme.breakpoints.up('xl')]: {
             width: '8rem',
             height: '8rem',
-            margin: '2rem',
+            margin: '3rem 2rem 2rem 2rem',
         },
         [theme.breakpoints.down('xl')]: {
             width: '5em',
@@ -37,13 +37,23 @@ const Skill:VFC<skillProps> = (props) => {
         [theme.breakpoints.up('xl')]: {
             fontSize: '16px'
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xl')]: {
             fontSize: '14px'
         },
     })
-    const SkillDescDiv = styled('div')({
-        display: 'block'
-    })
+    const SkillDescDiv = styled('div')(({ theme }) => ({
+        [theme.breakpoints.up('xl')]: {
+            width: '30rem',
+        },
+        [theme.breakpoints.down('xl')]: {
+            width: '30rem',
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: '30rem',
+        },
+    }));
+
+    console.log(data)
 
     return (
         <>

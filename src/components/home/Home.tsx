@@ -13,15 +13,15 @@ const Main = () => {
             fontSize: '8rem',
             marginLeft: '1.5rem',
             lineHeight: '7rem',
-          },
-          [theme.breakpoints.down('xl')]: {
+        },
+        [theme.breakpoints.down('xl')]: {
             fontSize: '5rem',
             marginLeft: '2rem',
             lineHeight: '4.5rem',
-          },
-          [theme.breakpoints.down('sm')]: {
+        },
+        [theme.breakpoints.down('sm')]: {
             fontSize: '2.5rem',
-          },
+        },
     }));
 
     const ImageAndPara = styled('div')(({theme}) => ({
@@ -50,16 +50,9 @@ const Main = () => {
             fontSize: '5rem'
         },
         [theme.breakpoints.down('sm')]: {
-            fontSize: '4rem',
+            fontSize: '3.5rem',
         },
     }));
-
-    // const Name = styled('div')(({theme}) => ({
-    //     right: '4rem',
-    //     [theme.breakpoints.down('sm')]: {
-    //         right: '1rem',
-    //     },
-    // }));
 
 
     return (

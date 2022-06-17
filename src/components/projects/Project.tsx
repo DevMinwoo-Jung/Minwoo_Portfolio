@@ -1,7 +1,6 @@
 import React, { VFC } from 'react'
 import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
-import CardMedia from '@mui/material/CardMedia'
 import { styled } from "@mui/system"
 import { GoMarkGithub } from 'react-icons/go'
 import { BiSlideshow } from 'react-icons/bi'
@@ -10,10 +9,11 @@ import Tooltip from '@mui/material/Tooltip'
 
 export type ProjectProps =  {
     project: any
+    mode: string
 }
 
 const Project:VFC<ProjectProps> = (props) => {
-    const { project } = props
+    const { mode, project } = props
 
     const CardStyle = styled(Card)(({ theme }) => ({
         width: '45rem',
@@ -28,17 +28,24 @@ const Project:VFC<ProjectProps> = (props) => {
         },
     }));
 
-    const CardMediaStyle = styled(CardMedia)(({ theme }) => ({
+    const CardMediaOuter = styled('div')(({ theme }) => ({
         width: '20rem',
+        height: '20rem',
         [theme.breakpoints.between('xl', 'md')]: {
             width: theme.breakpoints.values.xl
         },
         [theme.breakpoints.down('sm')]: {
-            height: '20rem',
+            height: '25rem',
             width: '90%',
             margin: 'auto'
         },
-    }));
+    }))
+
+    const CardMediaStyle = styled('img')({
+        width: '100%',
+        objectFit: 'fill',
+        height: '100%',
+    });
 
     const DescBox = styled(Box)(({ theme }) => ({
         width: '30rem',
@@ -81,6 +88,12 @@ const Project:VFC<ProjectProps> = (props) => {
         }
     })
 
+    const AtagBlack = styled('a')({
+        ":-webkit-any-link": {
+            color: 'white'
+        }
+    })
+
     const CardParaStyle = styled('span')({
         fontSize: '16px'
     })
@@ -90,16 +103,17 @@ const Project:VFC<ProjectProps> = (props) => {
         alignItems: 'center',
         padding: '8px',
         bottom: '0',
-
     })
 
 
     return (
         <CardDiv>
             <CardStyle>
-                <CardMediaStyle
-                    image='imgs/icon/javascript.png'
-                />
+                <CardMediaOuter>
+                    <CardMediaStyle
+                        src={project.project__img}
+                    />
+                </CardMediaOuter>
                 <DescBox>
                     <CardContentStyle>
                         <h2>{project.project__title}</h2>
@@ -114,15 +128,31 @@ const Project:VFC<ProjectProps> = (props) => {
                     <BoxStyle>
                         <IconsDiv>
                             <Tooltip title='Go to Github' placement="top">
-                                <AtagStyle target='_blank' href={project.project__src}>
-                                    <GoMarkGithub/>
-                                </AtagStyle>
+                                {
+                                    mode === 'light' 
+                                    ?                                 
+                                    <AtagStyle target='_blank' href={project.project__src}>
+                                        <GoMarkGithub/>
+                                    </AtagStyle>
+                                    :
+                                    <AtagBlack target='_blank' href={project.project__src}>
+                                        <GoMarkGithub/>
+                                    </AtagBlack>
+                                }
                             </Tooltip>
                             &nbsp;&nbsp;
                             <Tooltip title='Show Live' placement="top">
-                            <AtagStyle target='_blank' href={project.project__live}>
-                                <BiSlideshow />
-                            </AtagStyle>
+                                {
+                                    mode === 'light' 
+                                    ?                                 
+                                    <AtagStyle target='_blank' href={project.project__live}>
+                                        <BiSlideshow/>
+                                    </AtagStyle>
+                                    :
+                                    <AtagBlack target='_blank' href={project.project__live}>
+                                        <BiSlideshow/>
+                                    </AtagBlack>
+                                }
                             </Tooltip>
                         </IconsDiv>
                     </BoxStyle>

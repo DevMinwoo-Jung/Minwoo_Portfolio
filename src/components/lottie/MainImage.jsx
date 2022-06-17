@@ -26,8 +26,8 @@ const _MainImage = () => {
           marginLeft: '2rem',
         },
         [theme.breakpoints.down('sm')]: {
-          maxWidth: '10rem',
-          maxHeight: '10rem',
+          maxWidth: '8rem',
+          maxHeight: '8rem',
           marginLeft: '1rem',
         },
     }));

@@ -1,11 +1,16 @@
-import React, {useRef} from 'react'
-import {styled} from '@mui/system'
-import {useTheme} from '@mui/material/styles'
+import { useRef } from 'react'
+import { styled } from '@mui/system'
 import Project from './Project'
-import {projectsInfo} from '../../data'
+import { projectsInfo } from '../../data'
 import Grid from '@mui/material/Grid'
 
-const Projects = () => {
+type ProjectProps = {
+    mode: string
+}
+
+const Projects = (props:ProjectProps) => {
+
+    const { mode } = props
     const projectOffsetTop = useRef(null)
 
     const ProjectStyle = styled('div')({
@@ -26,13 +31,13 @@ const Projects = () => {
         textAlign: 'center',
         [theme.breakpoints.up('xl')]: {
             fontSize: '7rem',
-          },
-          [theme.breakpoints.down('xl')]: {
+        },
+        [theme.breakpoints.down('xl')]: {
             fontSize: '5rem'
-          },
-          [theme.breakpoints.down('sm')]: {
+        },
+        [theme.breakpoints.down('sm')]: {
             fontSize: '2rem',
-          },
+        },
     }))
 
     return (
@@ -44,7 +49,7 @@ const Projects = () => {
                         .map((key) => projectsInfo[key])
                         .map((project) => (
                             <Grid item sm={12} md={12} xl={6}>
-                                <Project project={project} key={Math.random()}/>
+                                <Project mode={mode} project={project} key={Math.random()}/>
                             </Grid>
                         ))}
                 </ProjectsGrid>

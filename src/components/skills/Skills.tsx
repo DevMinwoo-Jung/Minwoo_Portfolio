@@ -10,19 +10,20 @@ const Skills = ({ skillsOffsetTop }: RefType) => {
 
     const SkillsStyle = styled('div')({
         width: '100%',
+        margin: 'auto',
     })
 
     const SectionHeader = styled('h1')(({theme}) => ({
         textAlign: 'center',
         [theme.breakpoints.up('xl')]: {
             fontSize: '7rem',
-          },
-          [theme.breakpoints.down('xl')]: {
+        },
+        [theme.breakpoints.down('xl')]: {
             fontSize: '5rem'
-          },
-          [theme.breakpoints.down('sm')]: {
+        },
+        [theme.breakpoints.down('sm')]: {
             fontSize: '2rem',
-          },
+        },
     }))
 
     const [hideSkills, setHideSkills] = useState(true);
@@ -53,7 +54,7 @@ const Skills = ({ skillsOffsetTop }: RefType) => {
                             .map((key) => skills[key])
                             .map((data) => (
                                 <Grid item sm={12} md={12} xl={6}>
-                                    <Skill data={data} key={data.skillName} />
+                                    <Skill data={data} />
                                 </Grid>
                             ))
                     }
