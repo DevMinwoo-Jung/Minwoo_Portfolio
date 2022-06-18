@@ -53,7 +53,6 @@ const Skill:VFC<skillProps> = (props) => {
         },
     }));
 
-    console.log(data)
 
     return (
         <>
@@ -63,7 +62,7 @@ const Skill:VFC<skillProps> = (props) => {
                     <SkillHeader>{data.skillName}</SkillHeader>
                     {
                         data.skillDesc.map((element:string) =>
-                            <SkillDesc>{element}</SkillDesc>
+                            <SkillDesc key={element}>{element}</SkillDesc>
                         )
                     }
                 </SkillDescDiv>

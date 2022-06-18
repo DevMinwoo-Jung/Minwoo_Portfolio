@@ -6,12 +6,14 @@ const About = () => {
   const About = styled('div')({
       width: '80%',
       margin: 'auto',
-      textAlign: 'center'
+      textAlign: 'center',
   })
 
   const AvartarStyle = styled(Avatar)(({ theme }) => ({
     margin: 'auto',
     alignItems: 'center',
+    objectFit: 'contain',
+    borderRadius: '99999px',
     [theme.breakpoints.up('xl')]: {
       width: '25rem',
       height: '25rem',
@@ -52,7 +54,7 @@ const About = () => {
   return (
     <About>
         <SectionHeader>About Me</SectionHeader>
-        <AvartarStyle variant='rounded' src='imgs/icon/javascript.png'/>
+        <AvartarStyle src='imgs/me.jpeg'/>
         <h1>- Slow and steady wins the race. -</h1>
         <Introduce>
           <h4>

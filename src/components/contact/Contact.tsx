@@ -1,8 +1,8 @@
 import React from 'react'
 import {styled} from '@mui/system'
-import Github from '../lottie/Github'
-import Email from '../lottie/Email'
-import Call from '../lottie/Call'
+import { HiOutlineMail } from 'react-icons/hi'
+import { AiFillGithub } from 'react-icons/ai'
+import { BsPhone } from 'react-icons/bs'
 
 const Contact = () => {
     const ContactDiv = styled('div')({
@@ -45,19 +45,19 @@ const Contact = () => {
         <ContactDiv>
             <SectionHeader>Contact</SectionHeader>
             <IconsDiv>
-                <Github/>
+                <AiFillGithub/>
                 <IconPara>
                     Github: https://github.com/DevMinwoo-Jung   
                 </IconPara>
             </IconsDiv>
             <IconsDiv>
-                <Email/>
+                <HiOutlineMail/>
                 <IconPara >
                     Email: applejung312@gmail.com
                 </IconPara>
             </IconsDiv>
             <IconsDiv>
-                <Call/>
+                <BsPhone/>
                 <IconPara>
                     Phone: {`(82)010-8599-3012 `}
                 </IconPara>

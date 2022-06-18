@@ -1,5 +1,4 @@
 import React, {useRef} from 'react';
-import './App.css';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Header from './components/header/Header';
 import { ColorModeContext } from './components/darkMode/darkMode';
@@ -11,6 +10,7 @@ import Projects from './components/projects/Projects';
 import Skills from './components/skills/Skills';
 import Home from './components/home/Home';
 import styled from "@emotion/styled";
+import { ToggleButton } from '../src/components/darkMode/darkMode'
 
 function App() {
 
@@ -56,6 +56,13 @@ function App() {
         },
     }));
 
+    const ToogleStyle = styled(ToggleButton)({
+        position: 'fixed',
+        right: '10rem',
+        cursor: 'pointer',
+        zIndex: 15
+    })
+
     const headerOffsetTop = useRef()
     const homeOffsetTop = useRef()
     const aboutOffsetTop = useRef()
@@ -100,6 +107,7 @@ function App() {
                     <Root>
                         <div ref={headerOffsetTop}>
                             <Header handleAccessDiv={handleAccessDiv}/>
+                            <ToogleStyle/>
                         </div>
                         <div ref={homeOffsetTop}>
                             <Home/>

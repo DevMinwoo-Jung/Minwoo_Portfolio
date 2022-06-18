@@ -1,11 +1,18 @@
-import { memo, useEffect, useRef } from 'react'
-import { ToggleButton } from '../darkMode/darkMode'
+import { memo, useEffect, useRef, useState } from 'react'
+
 import { styled } from '@mui/system';
 
 const _Header = ({handleAccessDiv}: any ) => {
 
+  const [showHeader, setShowHeader] = useState(false)
   const HeaderStyle = styled('div')(({theme}) => ({
     width: '100%',
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    position: 'fixed',
+    zIndex: 10,
+    opacity: '1',
+    top:0,
     [theme.breakpoints.up('xl')]: {
       width: theme.breakpoints.values.xl,
       fontSize: '1.2rem',
@@ -19,12 +26,6 @@ const _Header = ({handleAccessDiv}: any ) => {
       fontSize: '0.8rem',
       justifyContent: 'center',
     },
-    display: 'flex',
-    justifyContent: 'space-evenly',
-    position: 'fixed',
-    zIndex: 10,
-    opacity: '1',
-    top:0
   }))
 
   const ContentsParaStyle = styled('p')({
@@ -39,11 +40,10 @@ const _Header = ({handleAccessDiv}: any ) => {
     const scroll = scrollRef.current.getBoundingClientRect()
     console.log(scroll.top)
     if(scroll.top <= -250) {
-      headerRef.current.style.opacity = '0.3'
-      headerRef.current.style.transition = '1s'
-    }
-    if(scroll.top > -250) {
       headerRef.current.style.opacity = '1'
+      headerRef.current.style.transition = '1s'
+    } else if(scroll.top > 0) {
+      headerRef.current.style.opacity = '0'
       headerRef.current.style.transition = '1s'
     }
   }
@@ -69,7 +69,6 @@ const _Header = ({handleAccessDiv}: any ) => {
           <ContentsParaStyle onClick={onAccessDiv}>Skills</ContentsParaStyle>
           <ContentsParaStyle onClick={onAccessDiv}>Project</ContentsParaStyle>
           <ContentsParaStyle onClick={onAccessDiv}>Contact</ContentsParaStyle>
-          <ToggleButton/>
         </HeaderStyle>
       </div>
   )

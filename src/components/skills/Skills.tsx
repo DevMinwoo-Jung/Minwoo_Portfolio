@@ -54,7 +54,7 @@ const Skills = ({ skillsOffsetTop }: RefType) => {
                             .map((key) => skills[key])
                             .map((data) => (
                                 <Grid item sm={12} md={12} xl={6}>
-                                    <Skill data={data} />
+                                    <Skill data={data} key={data.skillName}/>
                                 </Grid>
                             ))
                     }

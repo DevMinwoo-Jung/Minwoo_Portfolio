@@ -11,7 +11,7 @@ export function ToggleButton() {
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
   return (
-    <Box style={{marginTop: '1rem'}}>
+    <Box style={{ top: '1rem', right: '2rem', position:'fixed' }}>
       <IconButton onClick={colorMode.toggleColorMode} color="inherit">
         {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
       </IconButton>

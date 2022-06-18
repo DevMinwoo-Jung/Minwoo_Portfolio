@@ -56,7 +56,7 @@ const Project:VFC<ProjectProps> = (props) => {
             width: theme.breakpoints.values.xl
         },
         [theme.breakpoints.down('sm')]: {
-            height: '23rem',
+            height: '20rem',
             width: '25rem',
             fontSize: '14px'
         },

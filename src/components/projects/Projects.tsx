@@ -49,7 +49,7 @@ const Projects = (props:ProjectProps) => {
                         .map((key) => projectsInfo[key])
                         .map((project) => (
                             <Grid item sm={12} md={12} xl={6}>
-                                <Project mode={mode} project={project} key={Math.random()}/>
+                                <Project mode={mode} project={project} key={project.project__title}/>
                             </Grid>
                         ))}
                 </ProjectsGrid>
