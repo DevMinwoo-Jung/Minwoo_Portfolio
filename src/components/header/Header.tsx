@@ -1,17 +1,16 @@
-import { memo, useEffect, useRef, useState } from 'react'
+import { memo, useEffect, useRef } from 'react'
 
 import { styled } from '@mui/system';
 
 const _Header = ({handleAccessDiv}: any ) => {
 
-  const [showHeader, setShowHeader] = useState(false)
   const HeaderStyle = styled('div')(({theme}) => ({
+    opacity: 0,
     width: '100%',
     display: 'flex',
     justifyContent: 'space-evenly',
     position: 'fixed',
     zIndex: 10,
-    opacity: '1',
     top:0,
     [theme.breakpoints.up('xl')]: {
       width: theme.breakpoints.values.xl,
@@ -31,6 +30,10 @@ const _Header = ({handleAccessDiv}: any ) => {
   const ContentsParaStyle = styled('p')({
     paddingLeft: '1rem',
     cursor: 'pointer',
+    width: '100%',
+    backgroundColor: 'white',
+    paddingTop: '1rem',
+    margin: '0'
   })
 
   const scrollRef: any = useRef()
