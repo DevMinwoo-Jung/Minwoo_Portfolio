@@ -1,6 +1,5 @@
 import { Avatar } from '@mui/material';
 import { styled } from '@mui/system';
-import React from 'react'
 
 const About = () => {
   const About = styled('div')({

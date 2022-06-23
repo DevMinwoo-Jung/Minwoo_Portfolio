@@ -31,9 +31,9 @@ const _Header = ({handleAccessDiv}: any ) => {
     paddingLeft: '1rem',
     cursor: 'pointer',
     width: '100%',
-    backgroundColor: 'white',
     paddingTop: '1rem',
-    margin: '0'
+    margin: '0',
+    fontSize: '1rem'
   })
 
   const scrollRef: any = useRef()
@@ -60,7 +60,6 @@ const _Header = ({handleAccessDiv}: any ) => {
   }, [scrollRef]);
 
   const onAccessDiv = (e:any) => {
-    console.log(e.target.innerHTML)
     handleAccessDiv(e)
   }
 
