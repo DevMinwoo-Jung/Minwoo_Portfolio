@@ -3,6 +3,7 @@ import {styled} from '@mui/system'
 import { HiOutlineMail } from 'react-icons/hi'
 import { AiFillGithub } from 'react-icons/ai'
 import { BsPhone } from 'react-icons/bs'
+import { SiBloglovin } from 'react-icons/si'
 
 const Contact = () => {
     const ContactDiv = styled('div')(({theme}) => ({
@@ -63,6 +64,12 @@ const Contact = () => {
                 <BsPhone/>
                 <IconPara>
                     Phone: {`(82)010-8599-3012 `}
+                </IconPara>
+            </IconsDiv>
+            <IconsDiv>
+                <SiBloglovin/>
+                <IconPara>
+                    https://velog.io/@lastya
                 </IconPara>
             </IconsDiv>
         </ContactDiv>
