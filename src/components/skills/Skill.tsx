@@ -1,71 +1,55 @@
-import React, { VFC } from 'react'
-import { styled, Theme, useTheme } from '@mui/system'
+import React, { FC } from 'react'
+import { styled, textAlign, Theme, useTheme } from '@mui/system'
 
 export type skillProps = {
     data: any
 }
 
-const Skill:VFC<skillProps> = (props) => {
+const Skill:FC<skillProps> = (props) => {
     const { data } = props
+    console.log(data)
     const theme: Theme = useTheme()
     const SkillsDiv = styled('div')({
         position: 'relative',
-        display: 'flex',
-        justifyContent: 'center'
-    })
-    const ImgStyle = styled('img')({
+        display: 'block',
+        margin: 'auto',
+        justifyContent: 'center',
+        textAlign: 'center',
         [theme.breakpoints.up('xl')]: {
-            width: '8rem',
-            height: '8rem',
-            margin: '3rem 2rem 2rem 2rem',
+            width: '10rem',
         },
         [theme.breakpoints.down('xl')]: {
-            width: '5em',
-            height: '5rem',
-            margin: '2rem',
+            width: '10rem',
         },
         [theme.breakpoints.down('sm')]: {
+            width: '10rem',
+        },
+    })
+    const ImgStyle = styled('img')({
+        margin: '1rem auto',
+        [theme.breakpoints.up('xl')]: {
             width: '5rem',
             height: '5rem',
-            margin: 'auto 1rem',
+        },
+        [theme.breakpoints.down('xl')]: {
+            width: '4rem',
+            height: '4rem',
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: '3rem',
+            height: '3rem',
         },
     })
     const SkillHeader = styled('p')({
-        margin: '2rem'
+        margin: '2rem',
     })
-    const SkillDesc = styled('p')({
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '16px'
-        },
-        [theme.breakpoints.down('xl')]: {
-            fontSize: '14px'
-        },
-    })
-    const SkillDescDiv = styled('div')(({ theme }) => ({
-        [theme.breakpoints.up('xl')]: {
-            width: '30rem',
-        },
-        [theme.breakpoints.down('xl')]: {
-            width: '30rem',
-        },
-        [theme.breakpoints.down('sm')]: {
-            width: '30rem',
-        },
-    }));
 
 
     return (
         <>
             <SkillsDiv key={Math.random()}>
                 <ImgStyle src={data.imgSrc} alt='' />
-                <SkillDescDiv>
-                    <SkillHeader>{data.skillName}</SkillHeader>
-                    {
-                        data.skillDesc.map((element:string) =>
-                            <SkillDesc key={element}>{element}</SkillDesc>
-                        )
-                    }
-                </SkillDescDiv>
+                <SkillHeader>{data.skillName}</SkillHeader>
             </SkillsDiv>
         </>
     )

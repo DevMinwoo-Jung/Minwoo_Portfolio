@@ -2,9 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 import { styled } from '@mui/system'
 import { RefType } from '../../utils/type'
 import { Slide } from '@mui/material'
-import Skill from './Skill'
-import { skills } from '../../data'
+import MainSKill from './MainSkill'
+import { skills, mainSkills } from '../../data'
 import Grid from '@mui/material/Grid'
+import Skill from './Skill'
 
 const Skills = ({ skillsOffsetTop }: RefType) => {
 
@@ -25,6 +26,15 @@ const Skills = ({ skillsOffsetTop }: RefType) => {
             fontSize: '2rem',
         },
     }))
+
+    const MarginDiv = styled('div')({
+        width: '100%',
+        marginTop: '5rem'
+    })
+
+    const SkillHeader = styled('h1')({
+        marginLeft: '1rem'
+    })
 
     const [hideSkills, setHideSkills] = useState(true);
     const scrollRef: any = useRef()
@@ -47,17 +57,30 @@ const Skills = ({ skillsOffsetTop }: RefType) => {
     return (
         <SkillsStyle ref={scrollRef}>
             <SectionHeader>Skills</SectionHeader>
-            <Slide direction="up" in={!hideSkills}>
-                <Grid container>
-                    {
-                        Object.keys(skills)
+            <SkillHeader>Main SKills</SkillHeader>
+            <Slide direction="down" in={!hideSkills}>
+                <Grid container style={{justifyContent:'center'}}>
+                        {
+                            Object.keys(mainSkills)
+                                .map((key) => mainSkills[key])
+                                .map((data) => (
+                                    <Grid item sm={12} md={12} xl={6}>
+                                        <MainSKill data={data} key={data.skillName}/>
+                                    </Grid>
+                                ))
+                        }
+                    <MarginDiv>
+                        <SkillHeader>Others</SkillHeader>
+                    </MarginDiv>
+                        {
+                            Object.keys(skills)
                             .map((key) => skills[key])
                             .map((data) => (
-                                <Grid item sm={12} md={12} xl={6}>
+                                <Grid item sm={4} md={2} xl={2}>
                                     <Skill data={data} key={data.skillName}/>
                                 </Grid>
                             ))
-                    }
+                        }
                 </Grid>
             </Slide>
         </SkillsStyle>

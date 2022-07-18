@@ -5,11 +5,14 @@ import { AiFillGithub } from 'react-icons/ai'
 import { BsPhone } from 'react-icons/bs'
 
 const Contact = () => {
-    const ContactDiv = styled('div')({
+    const ContactDiv = styled('div')(({theme}) => ({
         width: '100%',
         display: 'block',
         margin: '2rem',
-    })
+        [theme.breakpoints.down('sm')]: {
+            margin: 0,
+        },
+    }));
     
     const IconsDiv = styled('div')({
         fontSize: '2.5rem',

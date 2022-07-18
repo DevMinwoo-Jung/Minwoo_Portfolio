@@ -20,10 +20,16 @@ const _Header = ({handleAccessDiv}: any ) => {
       width: theme.breakpoints.values.xl,
       fontSize: '1rem'
     },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       width: theme.breakpoints.values.sm,
       fontSize: '0.8rem',
       justifyContent: 'center',
+      textAlign: 'center'
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: theme.breakpoints.values.xs,
+      fontSize: '0.5rem',
+      textAlign: 'left',
     },
   }))
 

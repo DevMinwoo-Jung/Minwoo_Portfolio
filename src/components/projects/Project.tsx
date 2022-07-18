@@ -1,4 +1,4 @@
-import React, { VFC } from 'react'
+import React, { FC } from 'react'
 import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
 import { styled } from "@mui/system"
@@ -12,9 +12,14 @@ export type ProjectProps =  {
     mode: string
 }
 
-const Project:VFC<ProjectProps> = (props) => {
+const Project:FC<ProjectProps> = (props) => {
     const { mode, project } = props
-
+   
+    const CardDiv = styled('div')({
+        width: '100%',
+        margin: 'auto'
+    })
+    
     const CardStyle = styled(Card)(({ theme }) => ({
         width: '45rem',
         display: 'flex',
@@ -23,7 +28,7 @@ const Project:VFC<ProjectProps> = (props) => {
             width: theme.breakpoints.values.xl
         },
         [theme.breakpoints.down('sm')]: {
-            width: '25rem',
+            width: '20rem',
             display: 'block'
         },
     }));
@@ -35,7 +40,7 @@ const Project:VFC<ProjectProps> = (props) => {
             width: theme.breakpoints.values.xl
         },
         [theme.breakpoints.down('sm')]: {
-            height: '25rem',
+            height: '20rem',
             width: '90%',
             margin: 'auto'
         },
@@ -48,6 +53,7 @@ const Project:VFC<ProjectProps> = (props) => {
     });
 
     const DescBox = styled(Box)(({ theme }) => ({
+        whiteSpace: 'pre-line',
         width: '30rem',
         height: '20rem',
         position: 'relative',
@@ -56,8 +62,8 @@ const Project:VFC<ProjectProps> = (props) => {
             width: theme.breakpoints.values.xl
         },
         [theme.breakpoints.down('sm')]: {
-            height: '20rem',
-            width: '25rem',
+            height: '22rem',
+            width: '22rem',
             fontSize: '14px'
         },
     }));
@@ -69,10 +75,6 @@ const Project:VFC<ProjectProps> = (props) => {
         width: '95%'
     })
 
-    const CardDiv = styled('div')({
-        width: '100%',
-        margin: 'auto'
-    })
 
     const IconsDiv = styled('div')({
         display: 'flex',
@@ -104,6 +106,7 @@ const Project:VFC<ProjectProps> = (props) => {
         padding: '8px',
         bottom: '0',
     })
+
 
 
     return (

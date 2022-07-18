@@ -21,6 +21,8 @@ const Main = () => {
         },
         [theme.breakpoints.down('sm')]: {
             fontSize: '2.5rem',
+            margin: 'auto',
+            textAlign: 'center'
         },
     }));
 
@@ -37,6 +39,7 @@ const Main = () => {
         },
         [theme.breakpoints.down('sm')]: {
             fontSize: '2rem',
+            display: 'block'
         },
     }))
 
@@ -51,6 +54,7 @@ const Main = () => {
         },
         [theme.breakpoints.down('sm')]: {
             fontSize: '3.5rem',
+            textAlign: 'center'
         },
     }));
 

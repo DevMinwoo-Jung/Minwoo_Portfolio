@@ -32,7 +32,7 @@ function App() {
                 },
                 breakpoints: {
                     values: {
-                        xs: 0,
+                        xs: 375,
                         sm: 600,
                         md: 900,
                         lg: 1200,
@@ -51,8 +51,11 @@ function App() {
         [theme.breakpoints.between('xl', 'md')]: {
             width: theme.breakpoints.values.xl
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.between('sm', 'md')]: {
             width: theme.breakpoints.values.sm
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: theme.breakpoints.values.xs
         },
     }));
 
@@ -60,7 +63,7 @@ function App() {
         position: 'fixed',
         right: '10rem',
         cursor: 'pointer',
-        zIndex: 15
+        zIndex: 15,
     })
 
     const headerOffsetTop = useRef()
