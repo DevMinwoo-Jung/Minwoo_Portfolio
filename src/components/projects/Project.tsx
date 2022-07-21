@@ -14,7 +14,6 @@ export type ProjectProps =  {
 
 const Project:FC<ProjectProps> = (props) => {
     const { mode, project } = props
-   
     const CardDiv = styled('div')({
         width: '100%',
         margin: 'auto'
@@ -63,8 +62,8 @@ const Project:FC<ProjectProps> = (props) => {
         },
         [theme.breakpoints.down('sm')]: {
             height: '22rem',
-            width: '22rem',
-            fontSize: '14px'
+            width: '19rem',
+            fontSize: '12px'
         },
     }));
 

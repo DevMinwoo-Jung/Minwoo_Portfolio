@@ -28,8 +28,10 @@ const _Header = ({handleAccessDiv}: any ) => {
     },
     [theme.breakpoints.down('sm')]: {
       width: theme.breakpoints.values.xs,
+      justifyContent: 'center',
       fontSize: '0.5rem',
       textAlign: 'left',
+      marginTop: '1rem'
     },
   }))
 
