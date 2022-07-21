@@ -13,9 +13,9 @@ export const mainSkills: any = {
   javascript: { imgSrc: "imgs/icon/javascript.png", skillName: "JavaScript", 
   skillDesc: ['array와 forEacrh의 차이, map, filter, reduce, split 등의 메서드.', '호이스팅, this, 클로저, promise async,await, call by value, call by reference', 'event Loop, 얕은 복사와 깊은 복사의 차이, mutable vs immutable의 차이와 예시']},
   typescript: { imgSrc: "imgs/icon/typescript.png", skillName: "TypeScript",  
-  skillDesc: ['type과 interface의 차이', '동적언어와 정적언어의 차이', '타입스크립트의 장점', '실제 프로젝트에 적용해 본 경험이 있습니다.']},
-  react: { imgSrc:"imgs/icon/react.png",skillName:"React", skillDesc: ["ES6 문법을 잘 히애하고 있습니다", "map, filter, reduce, split 등의 메서드를 사용하여 개발 할 수 있습니다.", "This를 정확히 이해하고 있습니다."]},
-  nextjs: { imgSrc:"imgs/icon/nextjs.png",skillName:"Nextjs", skillDesc: ["ES6 문법을 잘 히애하고 있습니다", "map, filter, reduce, split 등의 메서드를 사용하여 개발 할 수 있습니다.", "This를 정확히 이해하고 있습니다."]},
+  skillDesc: ['동적언어인 JavaScript와 정적언어인 Typescript의 차이', 'Typescript의 장점', 'Typescript의 기본 개념들을 이해하고 있습니다.']},
+  react: { imgSrc:"imgs/icon/react.png",skillName:"React", skillDesc: ["React를 사용하는 이유, 장점 기본 개념들을 알고 있습니다.", "Class와 Hooks의 차이를 알고 있습니다.", "UseState, UseEffect등의 hook의 기본 개념들을 알고 있습니다."]},
+  nextjs: { imgSrc:"imgs/icon/nextjs.png",skillName:"Nextjs", skillDesc: ["Next.js의 사용 이유를 알고 있습니다.", "Pages, dynamic routing, Link, Layout, _app, _document, getStaticProps, getServerSideProps을 비롯한 기본 개념들을 알고 있습니다."]},
 }
 
 export const skills: any = {
@@ -34,7 +34,6 @@ export const skills: any = {
   mysql: { imgSrc:"imgs/icon/mysql.png",skillName:"mysql", skillDesc: ["ES6 문법을 잘 히애하고 있습니다", "map, filter, reduce, split 등의 메서드를 사용하여 개발 할 수 있습니다.", "This를 정확히 이해하고 있습니다."]},
   nodejs: { imgSrc:"imgs/icon/nodejs.png",skillName:"Node.js", skillDesc: ["ES6 문법을 잘 히애하고 있습니다", "map, filter, reduce, split 등의 메서드를 사용하여 개발 할 수 있습니다.", "This를 정확히 이해하고 있습니다."]},
   antd: { imgSrc:"imgs/icon/antd.png",skillName:"Ant Design", skillDesc: ["ES6 문법을 잘 히애하고 있습니다", "map, filter, reduce, split 등의 메서드를 사용하여 개발 할 수 있습니다.", "This를 정확히 이해하고 있습니다."]},
-
 }
 
 export const projectsInfo: any = {
@@ -75,14 +74,14 @@ export const projectsInfo: any = {
       },
     project_four:
         {
-            project__img: `imgs/rsz_homepage.png`,
+            project__img: `imgs/health dairy.png`,
             project__title: 'Health Diary',
-            project__para: 'Nextjs와 express.js를 이용하여 front와 back둘 다 구현 해 보았습니다.',
+            project__para: '운동한 것을 기록할수 있는 웹앱을 구현중에 있습니다.',
             project__contribution: '100%',
-            project__making__duration: '5일',
-            project__detail: 'React, React-router 사용하였고 Sass, tailwindcss를 적용해 보았습니다.',
-            project__stack: 'React, Javascript,  React-router, Sass, tailwindcss',
-            project__src: 'https://github.com/DevMinwoo-Jung/Portfolio_for_Job',
-            project__live: 'https://devminwoo-jung.github.io/Portfolio_for_Job/'
+            project__making__duration: '20220702 ~ ing...',
+            project__detail: 'Nextjs와 React, Typescript, Redux, Redux-saga를 이용하여 front부분을 구현중에 있습니다.',
+            project__stack: 'React, Typescript, Next.js, Ant Design, styled-components',
+            project__src: 'https://github.com/DevMinwoo-Jung/health_dairy',
+            project__live: 'https://github.com/DevMinwoo-Jung/health_dairy'
         },
 }

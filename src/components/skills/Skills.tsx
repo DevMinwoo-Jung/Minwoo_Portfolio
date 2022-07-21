@@ -58,7 +58,7 @@ const Skills = ({ skillsOffsetTop }: RefType) => {
         <SkillsStyle ref={scrollRef}>
             <SectionHeader>Skills</SectionHeader>
             <SkillHeader>Main SKills</SkillHeader>
-            <Slide direction="down" in={!hideSkills}>
+            <div>
                 <Grid container style={{justifyContent:'center'}}>
                         {
                             Object.keys(mainSkills)
@@ -82,7 +82,7 @@ const Skills = ({ skillsOffsetTop }: RefType) => {
                             ))
                         }
                 </Grid>
-            </Slide>
+            </div>
         </SkillsStyle>
     )
 }
