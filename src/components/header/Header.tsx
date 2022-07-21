@@ -34,12 +34,12 @@ const _Header = ({handleAccessDiv}: any ) => {
   }))
 
   const ContentsParaStyle = styled('p')({
-    paddingLeft: '1rem',
+    paddingLeft: '0.5rem',
     cursor: 'pointer',
     width: '100%',
     paddingTop: '1rem',
     margin: '0',
-    fontSize: '1rem'
+    fontSize: '1rem',
   })
 
   const scrollRef: any = useRef()
