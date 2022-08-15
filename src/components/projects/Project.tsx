@@ -5,6 +5,7 @@ import { styled } from "@mui/system"
 import { GoMarkGithub } from 'react-icons/go'
 import { BiSlideshow } from 'react-icons/bi'
 import Tooltip from '@mui/material/Tooltip'
+import { HourglassOutlined } from '@ant-design/icons';
 
 
 export type ProjectProps =  {
@@ -50,6 +51,20 @@ const Project:FC<ProjectProps> = (props) => {
         objectFit: 'fill',
         height: '100%',
     });
+
+    const CardMediaDiv = styled('div')({
+        width: '100%',
+        objectFit: 'fill',
+        height: '100%',
+        textAlign: 'center',
+        fontSize: '5rem',
+        marginTop:' 5rem',
+    });
+
+    const ParaStyle = styled('p')({
+        fontSize: '1.5rem',
+        fontWeigth: 'bold'
+    })
 
     const DescBox = styled(Box)(({ theme }) => ({
         whiteSpace: 'pre-line',
@@ -112,9 +127,15 @@ const Project:FC<ProjectProps> = (props) => {
         <CardDiv>
             <CardStyle>
                 <CardMediaOuter>
-                    <CardMediaStyle
-                        src={project.project__img}
-                    />
+                    {
+                        project.project__img === null 
+                        ? 
+                        <CardMediaDiv>
+                            <HourglassOutlined />
+                            <ParaStyle>준비 중....</ParaStyle>
+                        </CardMediaDiv>
+                        : <CardMediaStyle src={project.project__img}/>
+                    }
                 </CardMediaOuter>
                 <DescBox>
                     <CardContentStyle>

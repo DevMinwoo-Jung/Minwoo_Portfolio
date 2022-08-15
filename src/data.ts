@@ -74,14 +74,14 @@ export const projectsInfo: any = {
       },
     project_four:
         {
-            project__img: `imgs/health dairy.png`,
-            project__title: 'Health Diary',
-            project__para: '운동한 것을 기록할수 있는 웹앱을 구현중에 있습니다.',
+            project__img: null,
+            project__title: 'my Diary',
+            project__para: '나만의 메모장을 구현중에 있습니다.',
             project__contribution: '100%',
-            project__making__duration: '20220702 ~ ing...',
+            project__making__duration: 'ing...',
             project__detail: 'Nextjs와 React, Typescript, Redux, Redux-saga를 이용하여 front부분을 구현중에 있습니다.',
             project__stack: 'React, Typescript, Next.js, Ant Design, styled-components',
-            project__src: 'https://github.com/DevMinwoo-Jung/health_dairy',
-            project__live: 'https://github.com/DevMinwoo-Jung/health_dairy'
+            project__src: 'https://github.com/DevMinwoo-Jung/my_dairy',
+            project__live: 'https://github.com/DevMinwoo-Jung/my_dairy'
         },
 }
