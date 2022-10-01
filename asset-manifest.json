@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Minwoo_Portfolio/static/css/main.d3b79f38.css",
-    "main.js": "/Minwoo_Portfolio/static/js/main.7973d16c.js",
+    "main.js": "/Minwoo_Portfolio/static/js/main.dc442aeb.js",
     "index.html": "/Minwoo_Portfolio/index.html",
     "main.d3b79f38.css.map": "/Minwoo_Portfolio/static/css/main.d3b79f38.css.map",
-    "main.7973d16c.js.map": "/Minwoo_Portfolio/static/js/main.7973d16c.js.map"
+    "main.dc442aeb.js.map": "/Minwoo_Portfolio/static/js/main.dc442aeb.js.map"
   },
   "entrypoints": [
     "static/css/main.d3b79f38.css",
-    "static/js/main.7973d16c.js"
+    "static/js/main.dc442aeb.js"
   ]
 }
