@@ -1,14 +1,3 @@
-type SkillName = {
-  [key:string]: string | object
-}
-
-type SkillDesc = {
-  imgSrc: string;
-  skillName: string;
-  customLabel: string;
-  skillDesc: string[];
-}
-
 export const mainSkills: any = {
   javascript: { imgSrc: "imgs/icon/javascript.png", skillName: "JavaScript", 
   skillDesc: ['array와 forEacrh의 차이, map, filter, reduce, split 등의 메서드.', '호이스팅, this, 클로저, promise async,await, call by value, call by reference', 'event Loop, 얕은 복사와 깊은 복사의 차이, mutable vs immutable의 차이와 예시']},
@@ -43,7 +32,6 @@ export const projectsInfo: any = {
         project__title: 'MiniGame',
         project__para: '일정하게 움직이는 물고기를 시간내에 클릭하는 게임입니다.',
         project__contribution: '100%',
-        project__making__duration: '10일',
         project__detail: 'Vanila Javascript를 이용한 Mini Game으로 Javasciprt의 class, this가 그리키는 것이 무엇인지 등의 문법 이해와 DOM요소의 조작 방식을 이해하는데 도움이 되었습니다.',
         project__stack: 'Vanila Javascript',
         project__src: 'https://github.com/DevMinwoo-Jung/miniGame',
@@ -55,7 +43,6 @@ export const projectsInfo: any = {
         project__title: 'Financial-ledger',
         project__para: '가계부를 제작하였습니다.',
         project__contribution: '100%',
-        project__making__duration: '3주',
         project__detail: 'React hooks를 이용하여 가계부를 제작하여 props, usestate등 리액트 전반을 이해할 수 있는데 도움이 되었으며 cloudinary, firebase API를 이용하여 이미지 업로드, db사용을 하였습니다. 또한 react-router를 이용하였습니다.',
         project__stack: 'Javascript, React, React-router, cloudinary, firebase',
         project__src: 'https://github.com/DevMinwoo-Jung/financial_ledger',
@@ -74,14 +61,13 @@ export const projectsInfo: any = {
       },
     project_four:
         {
-            project__img: null,
+            project__img: 'imgs/mydiary.png',
             project__title: 'my Diary',
-            project__para: '나만의 메모장을 구현중에 있습니다.',
+            project__para: '나만의 메모장을 구현했습니다.',
             project__contribution: '100%',
-            project__making__duration: 'ing...',
-            project__detail: 'Nextjs와 React, Typescript, Redux, Redux-saga를 이용하여 front부분을 구현중에 있습니다.',
-            project__stack: 'React, Typescript, Next.js, Ant Design, styled-components',
-            project__src: 'https://github.com/DevMinwoo-Jung/my_dairy',
-            project__live: 'https://github.com/DevMinwoo-Jung/my_dairy'
+            project__detail: '프론트는 React와 Nextjs를 사용하였고 백엔드는 Node.js, Sequlizer, express.js를 사용했으며 서버는 aws를 사용했습니다.',
+            project__stack: 'React, Typescript, Next.js, Ant Design, styled-components, Redux, Redux-Saga... etc, Back - Node.js, Sequlizer, express.js... etc ',
+            project__src: 'https://github.com/DevMinwoo-Jung/my_diary_distribute',
+            project__live: 'http://mydiary93.com/'
         },
 }
