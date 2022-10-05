@@ -67,7 +67,7 @@ export const projectsInfo: any = {
             project__contribution: '100%',
             project__detail: '프론트는 React와 Nextjs를 사용하였고 백엔드는 Node.js, Sequlizer, express.js를 사용했으며 서버는 aws를 사용했습니다.',
             project__stack: 'React, Typescript, Next.js, Ant Design, styled-components, Redux, Redux-Saga... etc, Back - Node.js, Sequlizer, express.js... etc ',
-            project__src: 'https://github.com/DevMinwoo-Jung/my_diary_distribute',
+            project__src: 'https://github.com/DevMinwoo-Jung/mydiary',
             project__live: 'http://mydiary93.com/'
         },
 }

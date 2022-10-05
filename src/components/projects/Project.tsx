@@ -142,8 +142,8 @@ const Project:FC<ProjectProps> = (props) => {
                         <h2>{project.project__title}</h2>
                         <CardParaStyle>
                             {project.project__para}<br/>
-                            기여도: {project.project__contribution}
-                            기간: {project.project__making__duration}<br/>
+                            기여도: {project.project__contribution}<br/>
+                            {/* 기간: {project.project__making__duration}<br/> */}
                             설명: {project.project__detail}<br/>
                             기술 스택: {project.project__stack}
                         </CardParaStyle>
