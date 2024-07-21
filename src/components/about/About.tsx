@@ -79,13 +79,8 @@ const About = () => {
         <h1 >Career and Eduaction</h1>
         <EduAndCarrer >
           <p >Career</p>
-          <p >2020.06 ~ 2021.01 - 이메인텍</p>
-          <p >
-            2017.04 ~ 2019.04 - 호서대학교 국제업무팀
-          </p>
-          <p >
-            2017.01 ~ 2017.01 - DYB 최선어학원 인턴
-          </p>
+          <p >2020.06 ~ 자이소프트</p>
+          <p >2022.10 ~ 2024. - 이메인텍</p>
           <p >Eduaction</p>
           <p >
             2019.09 ~ 2020.04 - Java & Paython 기반 응용 SW개발자 양성과정

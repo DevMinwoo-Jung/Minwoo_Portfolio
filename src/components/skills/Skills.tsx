@@ -3,7 +3,7 @@ import { styled } from '@mui/system'
 import { RefType } from '../../utils/type'
 import { Slide } from '@mui/material'
 import MainSKill from './MainSkill'
-import { skills, mainSkills } from '../../data'
+import { skills } from '../../data'
 import Grid from '@mui/material/Grid'
 import Skill from './Skill'
 
@@ -57,21 +57,8 @@ const Skills = ({ skillsOffsetTop }: RefType) => {
     return (
         <SkillsStyle ref={scrollRef}>
             <SectionHeader>Skills</SectionHeader>
-            <SkillHeader>Main SKills</SkillHeader>
             <div>
                 <Grid container style={{justifyContent:'center'}}>
-                        {
-                            Object.keys(mainSkills)
-                                .map((key) => mainSkills[key])
-                                .map((data) => (
-                                    <Grid item sm={12} md={12} xl={6}>
-                                        <MainSKill data={data} key={data.skillName}/>
-                                    </Grid>
-                                ))
-                        }
-                    <MarginDiv>
-                        <SkillHeader>Others</SkillHeader>
-                    </MarginDiv>
                         {
                             Object.keys(skills)
                             .map((key) => skills[key])
