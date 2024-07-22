@@ -48,7 +48,7 @@ const Projects = (props:ProjectProps) => {
                     {Object.keys(projectsInfo)
                         .map((key) => projectsInfo[key])
                         .map((project) => (
-                            <Grid item sm={12} md={12} xl={6}>
+                            <Grid item sm={16} md={16} xl={16}>
                                 <Project mode={mode} project={project} key={project.project__title}/>
                             </Grid>
                         ))}

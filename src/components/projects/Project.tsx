@@ -21,7 +21,7 @@ const Project:FC<ProjectProps> = (props) => {
     })
     
     const CardStyle = styled(Card)(({ theme }) => ({
-        width: '45rem',
+        width: '60rem',
         display: 'flex',
         margin: 'auto',
         [theme.breakpoints.between('xl', 'md')]: {
@@ -123,6 +123,7 @@ const Project:FC<ProjectProps> = (props) => {
 
 
 
+
     return (
         <CardDiv>
             <CardStyle>
@@ -143,7 +144,6 @@ const Project:FC<ProjectProps> = (props) => {
                         <CardParaStyle>
                             {project.project__para}<br/>
                             기여도: {project.project__contribution}<br/>
-                            {/* 기간: {project.project__making__duration}<br/> */}
                             설명: {project.project__detail}<br/>
                             기술 스택: {project.project__stack}
                         </CardParaStyle>

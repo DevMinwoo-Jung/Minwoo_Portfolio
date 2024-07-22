@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { styled, textAlign, Theme, useTheme } from '@mui/system'
+import { styled, Theme, useTheme } from '@mui/system';
 
 export type skillProps = {
     data: any

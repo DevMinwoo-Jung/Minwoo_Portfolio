@@ -1,5 +1,6 @@
 import { Avatar } from '@mui/material';
 import { styled } from '@mui/system';
+import { Zai, emain } from '../../data';
 
 const About = () => {
   const About = styled('div')({
@@ -35,6 +36,33 @@ const About = () => {
   const EduAndCarrer = styled('div')({
     textAlign: 'left',
     display: 'block'
+  })
+
+  const ParaOneDept = styled('p')({
+    fontSize: '1rem',
+    marginLeft: '1rem',
+    margin: '0 0 0 1rem'
+  })
+
+  const CarrerDeptOne = styled('p')({
+      fontSize: '1rem',
+      marginRight: '0.5rem',
+  })
+
+  const CarrerTitle = styled('p')({
+    fontSize: '1rem',
+  })
+
+  const CarrerComapny = styled('p')({
+    fontSize: '1.5rem',
+    fontWeight: 'bolder',
+    marginTop: '0.5rem',
+    marginBottom: '0',
+    marginLeft: '0'
+  })
+
+  const CarrerDiv = styled('div')({
+    display: 'flex'
   })
 
   const SectionHeader = styled('h1')(({theme}) => ({
@@ -78,11 +106,36 @@ const About = () => {
 
         <h1 >Career and Eduaction</h1>
         <EduAndCarrer >
-          <p >Career</p>
-          <p >2020.06 ~ 자이소프트</p>
-          <p >2022.10 ~ 2024. - 이메인텍</p>
-          <p >Eduaction</p>
-          <p >
+          <CarrerComapny>2022.10 ~ Now 자이소프트</CarrerComapny>
+          {
+            Zai.map((ele) => {
+              return (
+                <>
+                  <CarrerDiv>
+                    <CarrerDeptOne>{ele.duration}</CarrerDeptOne>
+                    <CarrerTitle>{ele.project}</CarrerTitle>
+                  </CarrerDiv>
+                  <ParaOneDept>Duties: {ele.duties}</ParaOneDept>
+                </>
+              )
+            })
+          }
+          <CarrerComapny>2020.06 ~ 2021.01 이메인텍</CarrerComapny>
+          {
+            emain.map((ele) => {
+              return (
+                <>
+                  <CarrerDiv>
+                    <CarrerDeptOne>{ele.duration}</CarrerDeptOne>
+                    <CarrerTitle>{ele.project}</CarrerTitle>
+                  </CarrerDiv>
+                  <ParaOneDept>Duties: {ele.duties}</ParaOneDept>
+                </>
+              )
+            })
+          }
+          <CarrerTitle>Eduaction</CarrerTitle>
+          <p>
             2019.09 ~ 2020.04 - Java & Paython 기반 응용 SW개발자 양성과정
           </p>
           <p >
