@@ -1,22 +1,42 @@
+import { ReactComponent as nextjs} from '../src/icon/antd.svg'
+import { ReactComponent as antd} from '../src/icon/antd.svg'
+import { ReactComponent as react} from '../src/icon/react.svg'
+import { ReactComponent as typescript} from '../src/icon/typescript.svg'
+import { ReactComponent as javascript} from '../src/icon/javascript.svg'
+import { ReactComponent as reactRouter} from '../src/icon/react-router.svg'
+import { ReactComponent as bootstrap} from '../src/icon/bootstrap.svg'
+import { ReactComponent as mui} from '../src/icon/mui.svg'
+import { ReactComponent as reduxSaga} from '../src/icon/redux-saga.svg'
+import { ReactComponent as github} from '../src/icon/github.svg'
+import { ReactComponent as redux} from '../src/icon/redux.svg'
+import { ReactComponent as sass} from '../src/icon/sass.svg'
+import { ReactComponent as expressjs} from '../src/icon/express.svg'
+import { ReactComponent as nodejs} from '../src/icon/nodejs.svg'
+import { ReactComponent as csharp} from '../src/icon/csharp.svg'
+import { ReactComponent as mssql} from '../src/icon/mssql.svg'
+import { ReactComponent as tailwindCss} from '../src/icon/tailwindCss.svg'
+import { ReactComponent as jquery} from '../src/icon/jquery.svg'
+
+
 export const skills: any = {
-  nextjs: { imgSrc:"../icon/nextjs.svg",skillName:"Nextjs" },
-  react: { imgSrc:"../icon/react.svg",skillName:"React" },
-  typescript: { imgSrc: "../icon/typescript.svg", skillName: "TypeScript",  },
-  javascript: { imgSrc: "../icon/javascript.svg", skillName: "JavaScript",  },
-  reactRouter: { imgSrc:"../icon/reactRouter.svg",skillName:"react-router", },
-  bootstrap: { imgSrc:"../icon/bootstrap.svg",skillName:"Bootstrap" },
-  mui: { imgSrc:"../icon/mui.svg",skillName:"MUI" },
-  reduxSaga: { imgSrc:"../icon/redux-saga.svg",skillName:"Redux-Saga" },
-  github: { imgSrc:"../icon/github.svg",skillName:"Github" },
-  redux: { imgSrc:"../icon/redux.svg",skillName:"Redux" },
-  jquery: { imgSrc:"../icon/antd.svg",skillName:"jquery" },
-  sass: { imgSrc:"../icon/sass.svg",skillName:"Sass" },
-  expressjs: { imgSrc:"../icon/expressjs.svg",skillName:"express.js" },
-  nodejs: { imgSrc:"../icon/nodejs.svg",skillName:"Node.js" },
-  antd: { imgSrc:"../icon/antd.svg",skillName:"Ant Design" },
-  'c#': { imgSrc:"../icon/antd.svg",skillName:"c#" },
-  mssql: { imgSrc:"../icon/antd.svg",skillName:"mssql" },
-  tailwindCss: { imgSrc:"../icon/antd.svg",skillName:"tailwindCss" },
+  nextjs: { imgSrc: nextjs ,skillName:"Nextjs" },
+  react: { imgSrc: react ,skillName:"React" },
+  typescript: { imgSrc: typescript, skillName: "TypeScript",  },
+  javascript: { imgSrc: javascript, skillName: "JavaScript",  },
+  reactRouter: { imgSrc:reactRouter,skillName:"react-router", },
+  bootstrap: { imgSrc: bootstrap,skillName:"Bootstrap" },
+  mui: { imgSrc: mui,skillName:"MUI" },
+  reduxSaga: { imgSrc: reduxSaga ,skillName:"Redux-Saga" },
+  github: { imgSrc: github,skillName:"Github" },
+  redux: { imgSrc: redux,skillName:"Redux" },
+  jquery: { imgSrc: jquery,skillName:"jquery" },
+  sass: { imgSrc: sass,skillName:"Sass" },
+  expressjs: { imgSrc: expressjs,skillName:"express.js" },
+  nodejs: { imgSrc: nodejs,skillName:"Node.js" },
+  antd: { imgSrc: antd ,skillName:"Ant Design" },
+  'c#': { imgSrc: csharp,skillName:"c#" },
+  mssql: { imgSrc: mssql,skillName:"mssql" },
+  tailwindCss: { imgSrc: tailwindCss,skillName:"tailwindCss" },
 }
 
 export const projectsInfo: any = {

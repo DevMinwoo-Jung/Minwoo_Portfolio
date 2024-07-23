@@ -48,7 +48,7 @@ const Skill:FC<skillProps> = (props) => {
     return (
         <>
             <SkillsDiv key={Math.random()}>
-                <ImgStyle src={data.imgSrc} alt='' />
+                <data.imgSrc width={45} height={45}/>
                 <SkillHeader>{data.skillName}</SkillHeader>
             </SkillsDiv>
         </>

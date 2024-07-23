@@ -1,6 +1,9 @@
 import { Avatar } from '@mui/material';
 import { styled } from '@mui/system';
 import { Zai, emain } from '../../data';
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import Me from '../../../src/icon/me.jpeg'
 
 const About = () => {
   const About = styled('div')({
@@ -81,7 +84,7 @@ const About = () => {
   return (
     <About>
         <SectionHeader>About Me</SectionHeader>
-        <AvartarStyle src='imgs/me.jpeg'/>
+        <AvartarStyle src={Me}/>
         <h1>- Slow and steady wins the race. -</h1>
         <Introduce>
           <h4>
