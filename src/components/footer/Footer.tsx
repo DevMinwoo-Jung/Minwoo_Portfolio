@@ -20,10 +20,13 @@ const Footer = () => {
       fontSize: '14px',
     },
   })
+
+  const nowYear = new Date().getFullYear();
+
   return (
     <FooterStyle>
       <ParaStyle>
-        ©2022. 정민우 ALL RIGHTS RESERVED.
+        ©{nowYear}. 정민우 ALL RIGHTS RESERVED.
       </ParaStyle>
     </FooterStyle>
   )

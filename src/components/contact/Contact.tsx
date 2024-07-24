@@ -66,12 +66,12 @@ const Contact = () => {
                     Phone: {`(82)010-8599-3012 `}
                 </IconPara>
             </IconsDiv>
-            {/* <IconsDiv>
+            <IconsDiv>
                 <SiBloglovin/>
                 <IconPara>
                     https://velog.io/@lastya
                 </IconPara>
-            </IconsDiv> */}
+            </IconsDiv>
         </ContactDiv>
     )
 }
