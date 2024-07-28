@@ -56,6 +56,10 @@ const About = () => {
     fontSize: '1rem',
   })
 
+  const CarrerIntroduceDiv = styled('div')({
+    display: 'flex'
+  })
+
   const CarrerComapny = styled('p')({
     fontSize: '1.5rem',
     fontWeight: 'bolder',
@@ -64,8 +68,32 @@ const About = () => {
     marginLeft: '0'
   })
 
+  const CarrerIntroduce = styled('p')({
+    fontSize: '1.2rem',
+    fontWeight: 'bolder',
+    marginTop: '0.5rem',
+    marginBottom: '0',
+    marginLeft: '0'
+  })
+
+  const CarrerPeriod = styled('p')({
+    fontSize: '1rem',
+    marginTop: '0.5rem',
+    marginBottom: '0',
+    marginLeft: '0'
+  })
+
   const CarrerDiv = styled('div')({
     display: 'flex'
+  })
+
+  const CarrerCompanyDiv = styled('div')({
+    marginRight: '2rem'
+  })
+
+  const ATagStyle = styled('a')({
+    textDecoration: 'none',
+    color: 'grey'
   })
 
   const SectionHeader = styled('h1')(({theme}) => ({
@@ -109,44 +137,62 @@ const About = () => {
 
         <h1 >Career and Eduaction</h1>
         <EduAndCarrer >
-          <CarrerComapny>2022.10 ~ Now 자이소프트</CarrerComapny>
-          {
-            Zai.map((ele) => {
-              return (
-                <>
-                  <CarrerDiv>
-                    <CarrerDeptOne>{ele.duration}</CarrerDeptOne>
-                    <CarrerTitle>{ele.project}</CarrerTitle>
-                  </CarrerDiv>
-                  <ParaOneDept>Duties: {ele.duties}</ParaOneDept>
-                </>
-              )
-            })
-          }
-          <CarrerComapny>2020.06 ~ 2021.01 이메인텍</CarrerComapny>
-          {
-            emain.map((ele) => {
-              return (
-                <>
-                  <CarrerDiv>
-                    <CarrerDeptOne>{ele.duration}</CarrerDeptOne>
-                    <CarrerTitle>{ele.project}</CarrerTitle>
-                  </CarrerDiv>
-                  <ParaOneDept>Duties: {ele.duties}</ParaOneDept>
-                </>
-              )
-            })
-          }
-          <CarrerTitle>Eduaction</CarrerTitle>
-          <p>
-            2019.09 ~ 2020.04 - Java & Paython 기반 응용 SW개발자 양성과정
-          </p>
-          <p >
-            2012.02 ~ 2017.01 - 호서대학교 영어영문학과, 국제지역통상학과 졸업
-          </p>
-          <p >
-            2009.03 ~ 2012.01 - 경기도 오산, 오산고등학교 졸업
-          </p>
+          <CarrerIntroduceDiv>
+            <CarrerCompanyDiv>
+              <CarrerComapny>자이소프트</CarrerComapny>
+              <ATagStyle href='https://www.zaisoft.co.kr' target='_blank'>https://www.zaisoft.co.kr/</ATagStyle>
+              <CarrerIntroduce>웹 개발자</CarrerIntroduce>
+              <CarrerPeriod>2022.10 ~ Now</CarrerPeriod>
+            </CarrerCompanyDiv>
+            <div>
+            {
+              Zai.map((ele) => {
+                return (
+                  <>
+                    <CarrerDiv>
+                      <CarrerTitle>{ele.project}</CarrerTitle>
+                    </CarrerDiv>
+                    <ParaOneDept>{ele.duties}</ParaOneDept>
+                  </>
+                )
+              })
+            }
+            </div>
+          </CarrerIntroduceDiv>
+          <CarrerIntroduceDiv>
+            <CarrerCompanyDiv>
+              <CarrerComapny>이메인텍</CarrerComapny>
+              <ATagStyle href='http://www.emaintec.com/' target='_blank'>http://www.emaintec.com/</ATagStyle>
+              <CarrerIntroduce>웹 개발자</CarrerIntroduce>
+              <CarrerPeriod>2020.06 ~ 2021.01</CarrerPeriod>
+            </CarrerCompanyDiv>
+            <div>
+            {
+              emain.map((ele) => {
+                return (
+                  <>
+                    <CarrerDiv>
+                      <CarrerTitle>{ele.project}</CarrerTitle>
+                    </CarrerDiv>
+                    <ParaOneDept>{ele.duties}</ParaOneDept>
+                  </>
+                )
+              })
+            }
+            </div>
+          </CarrerIntroduceDiv>
+          <div>
+            <CarrerTitle>Eduaction</CarrerTitle>
+            <p>
+              2019.09 ~ 2020.04 - Java & Paython 기반 응용 SW개발자 양성과정
+            </p>
+            <p >
+              2012.02 ~ 2017.01 - 호서대학교 영어영문학과, 국제지역통상학과 졸업
+            </p>
+            <p >
+              2009.03 ~ 2012.01 - 경기도 오산, 오산고등학교 졸업
+            </p>
+          </div>
         </EduAndCarrer>
     </About>
   )
