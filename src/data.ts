@@ -79,7 +79,7 @@ export const Zai = [
   {
     "project": "삼성 DS 일정관리",
     "duration": "2023.09 ~ 2024.01",
-    "duties": "전반적인 UI 구성, 프론트엔드 개발"
+    "duties": "프론트엔드 구조 설계 및 구현"
   },
   {
     "project": "자사 솔루션 c# 마이그레이션 4.6 -D 6.0",
@@ -94,8 +94,8 @@ export const Zai = [
   {
     "others": "자사 프로젝트 유지보수",
     "duration": "2022.10 ~ Now",
-    "duties": "기존 프로젝트 유지보수, 기존 프로젝트에 새로운 IIS 구성, 인증서 교체, 원격지원을 통한 고객응대 etc"
-  },
+    "duties": "'- Outlook, OWA 대용량 첨부 add-in 어플리케이션 개발 '- 자사 솔루션 관리자 페이지 개발/유지보수''- 자사 솔루션 c# 4.6에서 6으로 마이그레이션' '- 자사 솔루션 유지보수 및 고객 원격 응대'"
+  }, 
 ]
 
 export const emain = [
