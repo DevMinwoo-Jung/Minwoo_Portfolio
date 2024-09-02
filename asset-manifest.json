@@ -1,13 +1,31 @@
 {
   "files": {
     "main.css": "/Minwoo_Portfolio/static/css/main.d3b79f38.css",
-    "main.js": "/Minwoo_Portfolio/static/js/main.fdcca185.js",
+    "main.js": "/Minwoo_Portfolio/static/js/main.c61fdc8b.js",
+    "static/media/me.jpeg": "/Minwoo_Portfolio/static/media/me.9bcccaa15833329df6e1.jpeg",
+    "static/media/mssql.svg": "/Minwoo_Portfolio/static/media/mssql.7e3c2025a2f083448bd8b4aa32b126ea.svg",
+    "static/media/nodejs.svg": "/Minwoo_Portfolio/static/media/nodejs.679e00d3f1224b41a5c85aca9765b898.svg",
+    "static/media/express.svg": "/Minwoo_Portfolio/static/media/express.62b6be91bb237350903a80f102f7e904.svg",
+    "static/media/react.svg": "/Minwoo_Portfolio/static/media/react.0cc978f43ea437de003e85712225e83b.svg",
+    "static/media/jquery.svg": "/Minwoo_Portfolio/static/media/jquery.4e23ad4c4ac3ac602b7b33014c736be8.svg",
+    "static/media/redux-saga.svg": "/Minwoo_Portfolio/static/media/redux-saga.e33cf145b7a9fa8da7d67a29aeeb0775.svg",
+    "static/media/sass.svg": "/Minwoo_Portfolio/static/media/sass.09084e13a33b2f13cd2d4e91139b5b62.svg",
+    "static/media/antd.svg": "/Minwoo_Portfolio/static/media/antd.c3b3150c1446dad451184d1f37163f7e.svg",
+    "static/media/csharp.svg": "/Minwoo_Portfolio/static/media/csharp.93ba21ebf5c7f4e5fb94538c4c948fec.svg",
+    "static/media/typescript.svg": "/Minwoo_Portfolio/static/media/typescript.0553733a9d433cefaf9e04ffcde0eb7a.svg",
+    "static/media/react-router.svg": "/Minwoo_Portfolio/static/media/react-router.7f2e263f483c9280a8bd0af2e3c6a4a7.svg",
+    "static/media/bootstrap.svg": "/Minwoo_Portfolio/static/media/bootstrap.46e166ca9591bcc3873daf2486df5473.svg",
+    "static/media/redux.svg": "/Minwoo_Portfolio/static/media/redux.0093fdee00ecf5136c9f7660ebe5e197.svg",
+    "static/media/javascript.svg": "/Minwoo_Portfolio/static/media/javascript.63b93412a24001eff2acc22e0cb40276.svg",
+    "static/media/tailwindCss.svg": "/Minwoo_Portfolio/static/media/tailwindCss.681db3393706b0b8d30fa63229e8ee85.svg",
+    "static/media/github.svg": "/Minwoo_Portfolio/static/media/github.cf3c708621b7a00e1d3c9e9782f1fc98.svg",
     "index.html": "/Minwoo_Portfolio/index.html",
+    "static/media/mui.svg": "/Minwoo_Portfolio/static/media/mui.b45776fb29e80a04fe8a1f4e944e7ae8.svg",
     "main.d3b79f38.css.map": "/Minwoo_Portfolio/static/css/main.d3b79f38.css.map",
-    "main.fdcca185.js.map": "/Minwoo_Portfolio/static/js/main.fdcca185.js.map"
+    "main.c61fdc8b.js.map": "/Minwoo_Portfolio/static/js/main.c61fdc8b.js.map"
   },
   "entrypoints": [
     "static/css/main.d3b79f38.css",
-    "static/js/main.fdcca185.js"
+    "static/js/main.c61fdc8b.js"
   ]
 }
