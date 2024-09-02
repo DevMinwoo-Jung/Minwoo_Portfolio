@@ -152,7 +152,7 @@ const About = () => {
                     <CarrerDiv>
                       <CarrerTitle>{ele.project}</CarrerTitle>
                     </CarrerDiv>
-                    <ParaOneDept>{ele.duties}</ParaOneDept>
+                    <ParaOneDept>* {ele.duties}</ParaOneDept>
                   </>
                 )
               })
@@ -174,7 +174,7 @@ const About = () => {
                     <CarrerDiv>
                       <CarrerTitle>{ele.project}</CarrerTitle>
                     </CarrerDiv>
-                    <ParaOneDept>{ele.duties}</ParaOneDept>
+                    <ParaOneDept>* {ele.duties}</ParaOneDept>
                   </>
                 )
               })
