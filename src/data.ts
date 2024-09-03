@@ -53,14 +53,14 @@ export const projectsInfo: any = {
       },
     project_1:
     {
-        project__img: 'imgs/weather_clothes',
+        project__img: 'imgs/weather_clothes.png',
         project__title: 'weather with clothes',
         project__para: '공공 API를 활용하여 우리 동네의 날씨를 알 수 있는 앱을 구현하였습니다.',
         project__contribution: '100%',
         project__detail: '프론트는 React와 Typescript를 사용하였습니다.',
         project__stack: 'React, Typescript, TwailwindCss, Redux, Redux-Saga',
-        project__src: 'https://github.com/DevMinwoo-Jung/mydiary',
-        project__live: 'http://mydiary93.com/'
+        project__src: 'https://github.com/DevMinwoo-Jung/weather_with_clothes/',
+        project__live: 'https://devminwoo-jung.github.io/weather_with_clothes/'
     },        
 }
 
