@@ -57,11 +57,22 @@ export const projectsInfo: any = {
         project__title: 'weather with clothes',
         project__para: '공공 API를 활용하여 우리 동네의 날씨를 알 수 있는 앱을 구현하였습니다.',
         project__contribution: '100%',
-        project__detail: '프론트는 React와 Typescript를 사용하였습니다.',
+        project__detail: 'React와 Typescript를 사용하였습니다.',
         project__stack: 'React, Typescript, TwailwindCss, Redux, Redux-Saga',
         project__src: 'https://github.com/DevMinwoo-Jung/weather_with_clothes/',
         project__live: 'https://devminwoo-jung.github.io/weather_with_clothes/'
     },        
+    project_2:
+    {
+        project__img: 'imgs/let_me_know_seoul_festival.png',
+        project__title: 'Let me know Seoul festival',
+        project__para: '서울 열린데이터 광장에서 제공하는 API를 활용하여 서울에서 진행중인 문화/공연 정보를 알 수 있는 앱을 구현하였습니다.',
+        project__contribution: '100%',
+        project__detail: 'Next.js Typescript를 사용하였습니다.',
+        project__stack: 'React, Typescript, TwailwindCss, Redux, Redux-Toolkit, React-query',
+        project__src: 'https://github.com/DevMinwoo-Jung/let_me_know_seoul_festival/',
+        project__live: 'https://devminwoo-jung.github.io/let_me_know_seoul_festival/'
+    }, 
 }
 
 export const Zai = [
