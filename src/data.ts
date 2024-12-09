@@ -48,8 +48,8 @@ export const projectsInfo: any = {
         project__contribution: '100%',
         project__detail: '반응형을 적용하였습니다.',
         project__stack: 'React, Typescript,  React-router, Sass, tailwindcss',
-        project__src: 'https://github.com/DevMinwoo-Jung/Portfolio_for_Job',
-        project__live: 'https://devminwoo-jung.github.io/Portfolio_for_Job/'
+        project__src: 'https://github.com/DevMinwoo-Jung/Minwoo_Portfolio',
+        project__live: 'https://devminwoo-jung.github.io/Minwoo_Portfolio/'
       },
     project_1:
     {
@@ -71,32 +71,50 @@ export const projectsInfo: any = {
         project__detail: 'Next.js Typescript를 사용하였습니다.',
         project__stack: 'React, Typescript, TwailwindCss, Redux, Redux-Toolkit, React-query',
         project__src: 'https://github.com/DevMinwoo-Jung/let_me_know_seoul_festival/',
-        project__live: 'https://devminwoo-jung.github.io/let_me_know_seoul_festival/'
+        project__live: 'https://letmeknowseoulfestival.life//'
     }, 
 }
 
 export const Zai = [
   {
-    "project": "삼성 DS 일정관리",
-    "duration": "2023.09 ~ 2024.01",
-    "duties": "프론트엔드 구조 설계 및 구현"
+    "project": "웹메일 시스템 개발",
+    "duration": "2023.01.01 ~ 2023.04.01",
+    "technologies": ["C#", "ASP.NET", "jQuery", "JavaScript", "Ajax", "JSON", "SVN", "GitLab"],
+    "duties": ["유지보수, 리팩토링, 추가 기능 개발"]
   },
   {
-    "project": "자사 솔루션 c# 마이그레이션 4.6 -> 6.0",
+    "project": "삼성 DS 일정 관리 - Teams 애플리케이션 개발",
+    "duration": "2023.07.01 ~ 2023.12.31",
+    "technologies": ["C#", "ASP.NET", "jQuery", "JavaScript", "Ajax", "JSON", "SVN", "GitLab"],
+    "duties": ["프론트엔드 구조 설계 및 구현"]
+  },
+  {
+    "project": "삼성 MIP 문서 보안 솔루션 - CDN 모듈 개발",
+    "duration": "2024.05.01 ~ 2024.07.05",
+    "technologies": ["C#", "ASP.NET", "jQuery", "JavaScript", "Ajax", "JSON", "SVN", "GitLab"],
+    "duties": ["MIP 문서 보안 솔루션을 위한 백엔드 및 프론트엔드 전반적인 개발 담당"]
+  },
+  {
+    "project": "이노션 Outlook, OWA 대용량 첨부 애드인 애플리케이션 개발",
+    "duration": "2024.07.08 ~ 2024.07.31",
+    "technologies": ["C#", "ASP.NET", "jQuery", "JavaScript", "Ajax", "JSON", "SVN", "GitLab"],
+    "duties": ["백엔드 및 프론트엔드 전반 담당"]
+  },
+  {
+    "project": "자사 솔루션 C# 마이그레이션 4.6 -> 6.0",
     "duration": "2024.03 ~ 2024.04",
-    "duties": "프론트, 백 전담"
-  },
-  {
-    "project": "자사 문서보안 프레임워크을 활용한 파일 upload and download 프로젝트",
-    "duration": "2024.05 ~ 2024.07",
-    "duties": "프론트, 백 전담"
+    "duties": ["프론트 및 백엔드 전반 담당"]
   },
   {
     "project": "자사 프로젝트 유지보수",
-    "duration": "2022.10 ~ Now",
-    "duties": ["Outlook, OWA 대용량 첨부 add-in 어플리케이션 개발", "자사 솔루션 관리자 페이지 개발/유지보수", "자사 솔루션 c# 4.6에서 6으로 마이그레이션", "자사 솔루션 유지보수 및 고객 원격 응대"]
-  }, 
-]
+    "duration": "2022.10 ~ 현재",
+    "duties": [
+      "솔루션 관리자 페이지 개발/유지보수",
+      "C# 4.6에서 6으로 솔루션 마이그레이션",
+      "솔루션 유지보수 및 원격 고객 대응"
+    ]
+  }
+];
 
 export const emain = [
   {

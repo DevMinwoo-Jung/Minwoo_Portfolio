@@ -31,34 +31,54 @@ const About = () => {
     },
   }))
 
-  const Introduce = styled('div')({
+  const Introduce = styled('div')(({theme}) => ({
     textAlign: 'center',
-    display: 'block'
-  })
+    display: 'block',
+    [theme.breakpoints.up('xl')]: {
+      display: 'block',
+  },
+  [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+  },
+  }))
 
   const EduAndCarrer = styled('div')({
     textAlign: 'left',
     display: 'block'
   })
 
-  const ParaOneDept = styled('p')({
+  const ParaOneDept = styled('p')(({theme}) => ({
     fontSize: '1rem',
     marginLeft: '1rem',
-    margin: '0 0 0 1rem'
-  })
+    margin: '0 0 0 1rem',
+    [theme.breakpoints.up('xl')]: {
+      textAlign: 'left'
+    },
+    [theme.breakpoints.down('sm')]: {
+        display: 'flex',
+        textAlign: 'center'
+    },
+  }))
 
   const CarrerDeptOne = styled('p')({
       fontSize: '1rem',
       marginRight: '0.5rem',
   })
 
-  const CarrerTitle = styled('p')({
-    fontSize: '1rem',
-  })
 
-  const CarrerIntroduceDiv = styled('div')({
-    display: 'flex'
-  })
+  const CarrerTitle = styled('p')(({theme}) => ({
+    fontSize: '1rem',
+  }))
+
+  const CarrerIntroduceDiv = styled('div')(({theme}) => ({
+    textAlign: 'center',
+    [theme.breakpoints.up('xl')]: {
+      display: 'flex',
+  },
+  [theme.breakpoints.down('sm')]: {
+      display: 'block',
+  },
+  }))
 
   const CarrerComapny = styled('p')({
     fontSize: '1.5rem',
@@ -83,9 +103,13 @@ const About = () => {
     marginLeft: '0'
   })
 
-  const CarrerDiv = styled('div')({
-    display: 'flex'
-  })
+  const CarrerDiv = styled('div')(({theme}) => ({
+    textAlign: 'left',
+    [theme.breakpoints.down('sm')]: {
+      justifyContent: 'center',
+      textAlign: 'inherit',
+    },
+  }))
 
   const CarrerCompanyDiv = styled('div')({
     marginRight: '2rem'
@@ -142,7 +166,7 @@ const About = () => {
               <CarrerComapny>자이소프트</CarrerComapny>
               <ATagStyle href='https://www.zaisoft.co.kr' target='_blank'>https://www.zaisoft.co.kr/</ATagStyle>
               <CarrerIntroduce>웹 개발자</CarrerIntroduce>
-              <CarrerPeriod>2022.10 ~ Now</CarrerPeriod>
+              <CarrerPeriod>2022.10 ~ 2024.10</CarrerPeriod>
             </CarrerCompanyDiv>
             <div>
             {
