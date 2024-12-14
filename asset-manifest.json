@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Minwoo_Portfolio/static/css/main.d3b79f38.css",
-    "main.js": "/Minwoo_Portfolio/static/js/main.1f751b8d.js",
+    "main.js": "/Minwoo_Portfolio/static/js/main.594a5c27.js",
     "static/media/me.jpeg": "/Minwoo_Portfolio/static/media/me.9bcccaa15833329df6e1.jpeg",
     "static/media/mssql.svg": "/Minwoo_Portfolio/static/media/mssql.7e3c2025a2f083448bd8b4aa32b126ea.svg",
     "static/media/nodejs.svg": "/Minwoo_Portfolio/static/media/nodejs.679e00d3f1224b41a5c85aca9765b898.svg",
@@ -22,10 +22,10 @@
     "index.html": "/Minwoo_Portfolio/index.html",
     "static/media/mui.svg": "/Minwoo_Portfolio/static/media/mui.b45776fb29e80a04fe8a1f4e944e7ae8.svg",
     "main.d3b79f38.css.map": "/Minwoo_Portfolio/static/css/main.d3b79f38.css.map",
-    "main.1f751b8d.js.map": "/Minwoo_Portfolio/static/js/main.1f751b8d.js.map"
+    "main.594a5c27.js.map": "/Minwoo_Portfolio/static/js/main.594a5c27.js.map"
   },
   "entrypoints": [
     "static/css/main.d3b79f38.css",
-    "static/js/main.1f751b8d.js"
+    "static/js/main.594a5c27.js"
   ]
 }
