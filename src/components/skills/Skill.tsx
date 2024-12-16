@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { styled, Theme, useTheme } from '@mui/system';
 
 export type skillProps = {
@@ -7,7 +7,6 @@ export type skillProps = {
 
 const Skill:FC<skillProps> = (props) => {
     const { data } = props
-    console.log(data)
     const theme: Theme = useTheme()
     const SkillsDiv = styled('div')({
         position: 'relative',
@@ -23,21 +22,6 @@ const Skill:FC<skillProps> = (props) => {
         },
         [theme.breakpoints.down('sm')]: {
             width: '10rem',
-        },
-    })
-    const ImgStyle = styled('img')({
-        margin: '1rem auto',
-        [theme.breakpoints.up('xl')]: {
-            width: '5rem',
-            height: '5rem',
-        },
-        [theme.breakpoints.down('xl')]: {
-            width: '4rem',
-            height: '4rem',
-        },
-        [theme.breakpoints.down('sm')]: {
-            width: '3rem',
-            height: '3rem',
         },
     })
     const SkillHeader = styled('p')({

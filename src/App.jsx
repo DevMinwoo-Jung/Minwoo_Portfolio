@@ -11,6 +11,7 @@ import Skills from './components/skills/Skills';
 import Home from './components/home/Home';
 import styled from "@emotion/styled";
 import { ToggleButton } from '../src/components/darkMode/darkMode'
+import { BsPhone } from 'react-icons/bs'
 
 function App() {
 
@@ -101,7 +102,6 @@ function App() {
             })
         }
     }
-
 
     return (
         <ColorModeContext.Provider value={colorMode}>
